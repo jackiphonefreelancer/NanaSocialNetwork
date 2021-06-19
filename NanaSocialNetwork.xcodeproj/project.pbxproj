@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,11 @@
 		8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC4267E186300F39706 /* AppDelegate.swift */; };
 		8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC6267E186300F39706 /* SceneDelegate.swift */; };
 		8DE6AFC9267E186300F39706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* ViewController.swift */; };
-		8DE6AFCC267E186300F39706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFCA267E186300F39706 /* Main.storyboard */; };
 		8DE6AFCE267E186700F39706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFCD267E186700F39706 /* Assets.xcassets */; };
 		8DE6AFD1267E186700F39706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */; };
+		8DE6AFE0267E208B00F39706 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFDF267E208B00F39706 /* Onboarding.storyboard */; };
+		8DE6AFE2267E20AA00F39706 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFE1267E20AA00F39706 /* Colors.xcassets */; };
+		8DE6AFE6267E215000F39706 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFE5267E215000F39706 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +26,12 @@
 		8DE6AFC4267E186300F39706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC6267E186300F39706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC8267E186300F39706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8DE6AFCB267E186300F39706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DE6AFCD267E186700F39706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE6AFD0267E186700F39706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE6AFD2267E186700F39706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DE6AFDF267E208B00F39706 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8DE6AFE1267E20AA00F39706 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8DE6AFE5267E215000F39706 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */,
 				3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,81 @@
 		8DE6AFC3267E186300F39706 /* NanaSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8DE6AFC4267E186300F39706 /* AppDelegate.swift */,
-				8DE6AFC6267E186300F39706 /* SceneDelegate.swift */,
-				8DE6AFC8267E186300F39706 /* ViewController.swift */,
-				8DE6AFCA267E186300F39706 /* Main.storyboard */,
-				8DE6AFCD267E186700F39706 /* Assets.xcassets */,
-				8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */,
+				8DE6AFDB267E1F9100F39706 /* Extensions */,
+				8DE6AFDC267E1F9900F39706 /* Configurations */,
+				8DE6AFD8267E1F5E00F39706 /* Application */,
+				8DE6AFDA267E1F8800F39706 /* Services */,
+				8DE6AFD9267E1F6F00F39706 /* Screens */,
+				8DE6AFDD267E1FBA00F39706 /* Resources */,
 				8DE6AFD2267E186700F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetwork;
+			sourceTree = "<group>";
+		};
+		8DE6AFD8267E1F5E00F39706 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6AFC4267E186300F39706 /* AppDelegate.swift */,
+				8DE6AFC6267E186300F39706 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8DE6AFD9267E1F6F00F39706 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6AFE3267E210500F39706 /* Onboarding */,
+				8DE6AFE4267E213600F39706 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8DE6AFDA267E1F8800F39706 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8DE6AFDB267E1F9100F39706 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8DE6AFDC267E1F9900F39706 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		8DE6AFDD267E1FBA00F39706 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */,
+				8DE6AFE5267E215000F39706 /* Home.storyboard */,
+				8DE6AFDF267E208B00F39706 /* Onboarding.storyboard */,
+				8DE6AFCD267E186700F39706 /* Assets.xcassets */,
+				8DE6AFE1267E20AA00F39706 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8DE6AFE3267E210500F39706 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6AFC8267E186300F39706 /* ViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8DE6AFE4267E213600F39706 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +220,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE6AFE0267E208B00F39706 /* Onboarding.storyboard in Resources */,
+				8DE6AFE6267E215000F39706 /* Home.storyboard in Resources */,
+				8DE6AFE2267E20AA00F39706 /* Colors.xcassets in Resources */,
 				8DE6AFD1267E186700F39706 /* LaunchScreen.storyboard in Resources */,
 				8DE6AFCE267E186700F39706 /* Assets.xcassets in Resources */,
-				8DE6AFCC267E186300F39706 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,14 +286,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8DE6AFCA267E186300F39706 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DE6AFCB267E186300F39706 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UQ7B5ZUC9;
 				INFOPLIST_FILE = NanaSocialNetwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.montakarn.srikritsanarat.NanaSocialNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UQ7B5ZUC9;
 				INFOPLIST_FILE = NanaSocialNetwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.montakarn.srikritsanarat.NanaSocialNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
