@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B2FACF7B7B1C46DA093B41 /* Pods_NanaSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */; };
 		8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC4267E186300F39706 /* AppDelegate.swift */; };
 		8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC6267E186300F39706 /* SceneDelegate.swift */; };
 		8DE6AFC9267E186300F39706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanaSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanaSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6AFC4267E186300F39706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC6267E186300F39706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B2FACF7B7B1C46DA093B41 /* Pods_NanaSocialNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7CC3B8F60710592B15A7F184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B7A0FD855E4D420B6529E23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */,
+				3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8DE6AFB8267E186300F39706 = {
 			isa = PBXGroup;
 			children = (
 				8DE6AFC3267E186300F39706 /* NanaSocialNetwork */,
 				8DE6AFC2267E186300F39706 /* Products */,
+				8B7A0FD855E4D420B6529E23 /* Pods */,
+				7CC3B8F60710592B15A7F184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DE6AFD5267E186700F39706 /* Build configuration list for PBXNativeTarget "NanaSocialNetwork" */;
 			buildPhases = (
+				9D5A14EFB194E80671C035AC /* [CP] Check Pods Manifest.lock */,
 				8DE6AFBD267E186300F39706 /* Sources */,
 				8DE6AFBE267E186300F39706 /* Frameworks */,
 				8DE6AFBF267E186300F39706 /* Resources */,
+				9AF4D44F4903BAC13F9D2501 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AF4D44F4903BAC13F9D2501 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5A14EFB194E80671C035AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NanaSocialNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DE6AFBD267E186300F39706 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		8DE6AFD6267E186700F39706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		8DE6AFD7267E186700F39706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
