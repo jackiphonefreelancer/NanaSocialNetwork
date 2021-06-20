@@ -1,4 +1,6 @@
 PODS:
+  - Firebase (8.1.1):
+    - Firebase/Core (= 8.1.1)
   - Firebase/Auth (8.1.1):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 8.1.0)
@@ -99,6 +101,7 @@ PODS:
   - RxSwift (6.2.0)
 
 DEPENDENCIES:
+  - Firebase
   - Firebase/Auth
   - Firebase/Core
   - RxSwift
@@ -134,6 +137,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 07b362779ff5155d2325beed401b100036a04308
+PODFILE CHECKSUM: dfe7c84b971af62bdbcb04314142562e36f85f93
 
 COCOAPODS: 1.10.1

@@ -26,9 +26,23 @@
 		8DE6AFFC267F415E00F39706 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFFB267F415E00F39706 /* String+Ex.swift */; };
 		8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFFD267F41F900F39706 /* AppLoading.swift */; };
 		8DE6B002267F468300F39706 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B001267F468300F39706 /* UIViewController+Ex.swift */; };
+		8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B009267F78C000F39706 /* LoginTests.swift */; };
+		E37B6020178EF22C4273A94D /* Pods_NanaSocialNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8DE6B00C267F78C000F39706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DE6AFB9267E186300F39706 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DE6AFC0267E186300F39706;
+			remoteInfo = NanaSocialNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1558D5485CAAB2AFE8374E53 /* Pods-NanaSocialNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanaSocialNetworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanaSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +66,10 @@
 		8DE6AFFB267F415E00F39706 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		8DE6AFFD267F41F900F39706 /* AppLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoading.swift; sourceTree = "<group>"; };
 		8DE6B001267F468300F39706 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
+		8DE6B007267F78BF00F39706 /* NanaSocialNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanaSocialNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DE6B009267F78C000F39706 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		8DE6B00B267F78C000F39706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DE6B004267F78BF00F39706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E37B6020178EF22C4273A94D /* Pods_NanaSocialNetworkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */,
+				1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,6 +106,8 @@
 			children = (
 				888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */,
 				3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */,
+				E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */,
+				1558D5485CAAB2AFE8374E53 /* Pods-NanaSocialNetworkTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -87,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6AFC3267E186300F39706 /* NanaSocialNetwork */,
+				8DE6B008267F78C000F39706 /* NanaSocialNetworkTests */,
 				8DE6AFC2267E186300F39706 /* Products */,
 				8B7A0FD855E4D420B6529E23 /* Pods */,
 				7CC3B8F60710592B15A7F184 /* Frameworks */,
@@ -97,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */,
+				8DE6B007267F78BF00F39706 /* NanaSocialNetworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +254,15 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		8DE6B008267F78C000F39706 /* NanaSocialNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6B009267F78C000F39706 /* LoginTests.swift */,
+				8DE6B00B267F78C000F39706 /* Info.plist */,
+			);
+			path = NanaSocialNetworkTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +285,26 @@
 			productReference = 8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8DE6B006267F78BF00F39706 /* NanaSocialNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DE6B00E267F78C000F39706 /* Build configuration list for PBXNativeTarget "NanaSocialNetworkTests" */;
+			buildPhases = (
+				0E9ADD8C2823AC1A167753BC /* [CP] Check Pods Manifest.lock */,
+				8DE6B003267F78BF00F39706 /* Sources */,
+				8DE6B004267F78BF00F39706 /* Frameworks */,
+				8DE6B005267F78BF00F39706 /* Resources */,
+				9A8FBA3AA78AD2B878069D0D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DE6B00D267F78C000F39706 /* PBXTargetDependency */,
+			);
+			name = NanaSocialNetworkTests;
+			productName = NanaSocialNetworkTests;
+			productReference = 8DE6B007267F78BF00F39706 /* NanaSocialNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,6 +316,10 @@
 				TargetAttributes = {
 					8DE6AFC0267E186300F39706 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					8DE6B006267F78BF00F39706 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 8DE6AFC0267E186300F39706;
 					};
 				};
 			};
@@ -273,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				8DE6AFC0267E186300F39706 /* NanaSocialNetwork */,
+				8DE6B006267F78BF00F39706 /* NanaSocialNetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,9 +356,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DE6B005267F78BF00F39706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E9ADD8C2823AC1A167753BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NanaSocialNetworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8FBA3AA78AD2B878069D0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9AF4D44F4903BAC13F9D2501 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,7 +466,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DE6B003267F78BF00F39706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DE6B00D267F78C000F39706 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DE6AFC0267E186300F39706 /* NanaSocialNetwork */;
+			targetProxy = 8DE6B00C267F78C000F39706 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */ = {
@@ -527,6 +654,50 @@
 			};
 			name = Release;
 		};
+		8DE6B00F267F78C000F39706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UQ7B5ZUC9;
+				INFOPLIST_FILE = NanaSocialNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.montakarn.srikritsanarat.NanaSocialNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanaSocialNetwork.app/NanaSocialNetwork";
+			};
+			name = Debug;
+		};
+		8DE6B010267F78C000F39706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1558D5485CAAB2AFE8374E53 /* Pods-NanaSocialNetworkTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UQ7B5ZUC9;
+				INFOPLIST_FILE = NanaSocialNetworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.montakarn.srikritsanarat.NanaSocialNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanaSocialNetwork.app/NanaSocialNetwork";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +715,15 @@
 			buildConfigurations = (
 				8DE6AFD6267E186700F39706 /* Debug */,
 				8DE6AFD7267E186700F39706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DE6B00E267F78C000F39706 /* Build configuration list for PBXNativeTarget "NanaSocialNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE6B00F267F78C000F39706 /* Debug */,
+				8DE6B010267F78C000F39706 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

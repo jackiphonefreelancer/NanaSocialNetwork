@@ -9,5 +9,13 @@ target 'NanaSocialNetwork' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'RxSwift'
+  
+  target 'NanaSocialNetworkTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Firebase'
+    pod 'RxSwift'
+
+  end
 
 end

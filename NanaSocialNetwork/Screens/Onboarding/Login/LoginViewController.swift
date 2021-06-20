@@ -77,10 +77,8 @@ extension LoginViewController {
 //MARK: - Validation
 extension LoginViewController {
     @objc func validateInput() {
-        guard let email = emailTextField.text,
-              let password = passwordTextField.text,
-              email.isValidEmail(),
-              !password.isEmpty else {
+        guard let email = emailTextField.text, viewModel.isValidEmail(email: email),
+              let password = passwordTextField.text, !password.isEmpty else {
             loginButton.lock()
             return
         }

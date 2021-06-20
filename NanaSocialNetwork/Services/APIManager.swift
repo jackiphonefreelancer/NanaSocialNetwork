@@ -23,7 +23,7 @@ enum LoginError {
 extension APIManager {
     /**
      completion block: return 2 parameters
-     parm 1: Success - (true: sucess, false fail)
+     param 1: Success - (true: sucess, false fail)
      param 2 LoginError - Wrong password, invalid email or unknown
      **/
     func login(withEmail email: String, password: String, completion: @escaping (Bool, LoginError?) -> Void) {
