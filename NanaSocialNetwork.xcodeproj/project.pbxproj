@@ -10,13 +10,14 @@
 		36B2FACF7B7B1C46DA093B41 /* Pods_NanaSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */; };
 		8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC4267E186300F39706 /* AppDelegate.swift */; };
 		8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC6267E186300F39706 /* SceneDelegate.swift */; };
-		8DE6AFC9267E186300F39706 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* LogInViewController.swift */; };
+		8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* LoginViewController.swift */; };
 		8DE6AFCE267E186700F39706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFCD267E186700F39706 /* Assets.xcassets */; };
 		8DE6AFD1267E186700F39706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFCF267E186700F39706 /* LaunchScreen.storyboard */; };
 		8DE6AFE0267E208B00F39706 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFDF267E208B00F39706 /* Onboarding.storyboard */; };
 		8DE6AFE2267E20AA00F39706 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFE1267E20AA00F39706 /* Colors.xcassets */; };
 		8DE6AFE6267E215000F39706 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFE5267E215000F39706 /* Home.storyboard */; };
 		8DE6AFEA267EB0A500F39706 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6AFE9267EB0A500F39706 /* GoogleService-Info.plist */; };
+		8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFEC267EBC0800F39706 /* IBInspectables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanaSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6AFC4267E186300F39706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC6267E186300F39706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8DE6AFC8267E186300F39706 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8DE6AFC8267E186300F39706 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DE6AFCD267E186700F39706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE6AFD0267E186700F39706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE6AFD2267E186700F39706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		8DE6AFE1267E20AA00F39706 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8DE6AFE5267E215000F39706 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		8DE6AFE9267EB0A500F39706 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DE6AFEC267EBC0800F39706 /* IBInspectables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBInspectables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		8DE6AFDB267E1F9100F39706 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8DE6AFEB267EBBFB00F39706 /* UI */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,7 +155,7 @@
 		8DE6AFE3267E210500F39706 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				8DE6AFC8267E186300F39706 /* LogInViewController.swift */,
+				8DE6AFC8267E186300F39706 /* LoginViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -162,6 +165,14 @@
 			children = (
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8DE6AFEB267EBBFB00F39706 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6AFEC267EBC0800F39706 /* IBInspectables.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE6AFC9267E186300F39706 /* LogInViewController.swift in Sources */,
+				8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */,
 				8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */,
 				8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */,
+				8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
