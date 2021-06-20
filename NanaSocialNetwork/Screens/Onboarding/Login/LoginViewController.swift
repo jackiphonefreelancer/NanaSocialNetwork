@@ -34,9 +34,8 @@ class LoginViewController: UIViewController {
         
         // Validate Input
         inputTextFields.forEach { textField in
-            textField.addTarget(self, action: #selector(validateInput), for: .editingChanged)
+            textField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         }
-        validateInput()
     }
     
     // BindView Model
@@ -44,6 +43,12 @@ class LoginViewController: UIViewController {
         viewModel.state
             .subscribe { [weak self] state in
                 self?.updateState(state)
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.buttonState
+            .subscribe { [weak self] isValid in
+                self?.updateButtonState(isValid)
             }
             .disposed(by: disposeBag)
     }
@@ -60,33 +65,31 @@ class LoginViewController: UIViewController {
             AppLoading.shared.hideLoading()
         }
     }
+    
+    func updateButtonState(_ isValid: Bool) {
+        isValid == true ? loginButton.unlock() : loginButton.lock()
+    }
 }
 
 //MARK: - IBAction
 extension LoginViewController {
     @IBAction func didPressLogin(_ sender: Any) {
-        viewModel.login(with: emailTextField.text!,
-                        password: passwordTextField.text!)
+        viewModel.login()
     }
     
     @IBAction func didPressRegister(_ sender: Any) {
         
     }
-}
-
-//MARK: - Validation
-extension LoginViewController {
-    @objc func validateInput() {
-        guard let email = emailTextField.text, viewModel.isValidEmail(email: email),
-              let password = passwordTextField.text, !password.isEmpty else {
-            loginButton.lock()
-            return
-        }
-        loginButton.unlock()
+    
+    @objc func textChanged(_ textField: UITextField) {
+        let text = textField.text
+        textField == emailTextField
+            ? viewModel.updateEmail(text)
+            : viewModel.updatePaswword(text)
     }
 }
 
-//MARK: - Dialog & Update UI
+//MARK: - Dialog & Router
 extension LoginViewController {
     func showLoginError(_ error: LoginError) {
         switch error {
@@ -96,9 +99,13 @@ extension LoginViewController {
             showErrorDialog(title: "Error", message: "Please try again later.")
         }
     }
+    
+    func showHomeScreen() {
+        
+    }
 }
 
-//MARK: - UITextfield delegate
+//MARK: - UITextfield Delegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let idx = inputTextFields.firstIndex(of: textField) else {
