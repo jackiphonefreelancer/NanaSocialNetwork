@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Feb-3h-Def">
-                                <rect key="frame" x="20" y="184" width="374" height="438"/>
+                                <rect key="frame" x="20" y="168" width="374" height="470"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="N23-wX-WoC">
                                         <rect key="frame" x="127" y="0.0" width="120" height="120"/>
@@ -28,85 +28,80 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-iy-lCS">
-                                        <rect key="frame" x="20" y="170" width="334" height="88"/>
+                                        <rect key="frame" x="20" y="170" width="334" height="120"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r2j-F5-db0">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUB-Q0-h7W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="MOm-z3-5co"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="appTitleColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnY-q7-jzP">
-                                                        <rect key="frame" x="110" y="0.0" width="224" height="34"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" name="appThemeColor"/>
-                                                        <color key="textColor" name="appTitleColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YSc-HK-yrh">
-                                                <rect key="frame" x="0.0" y="54" width="334" height="34"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-jB-2t5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="0tT-Dh-G3N"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="appTitleColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-jY-CdT">
-                                                        <rect key="frame" x="110" y="0.0" width="224" height="34"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="tintColor" name="appThemeColor"/>
-                                                        <color key="textColor" name="appTitleColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnY-q7-jzP" customClass="AppTextField" customModule="NanaSocialNetwork" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                                <color key="backgroundColor" name="appTextFieldBackgroundColor"/>
+                                                <color key="tintColor" name="appThemeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2bR-rr-o0f"/>
+                                                </constraints>
+                                                <color key="textColor" name="appHeaderTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="r3a-fU-Js3"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-jY-CdT" customClass="AppTextField" customModule="NanaSocialNetwork" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                                <color key="backgroundColor" name="appTextFieldBackgroundColor"/>
+                                                <color key="tintColor" name="appThemeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9CL-yZ-xjf"/>
+                                                </constraints>
+                                                <color key="textColor" name="appHeaderTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="hEb-rW-45u"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-5h-ECh">
-                                        <rect key="frame" x="40" y="308" width="294" height="50"/>
+                                        <rect key="frame" x="40" y="340" width="294" height="50"/>
                                         <color key="backgroundColor" name="appThemeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="0GO-jY-NeI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <state key="normal" title="Login">
-                                            <color key="titleColor" name="appTextColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" name="appThemeTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="goy-Kn-LZ0"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-z6-MBT">
-                                        <rect key="frame" x="44.5" y="408" width="285" height="30"/>
+                                        <rect key="frame" x="61" y="440" width="252" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not have account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-06-UNh">
-                                                <rect key="frame" x="0.0" y="6" width="153" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not registered yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-06-UNh">
+                                                <rect key="frame" x="0.0" y="6" width="131" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" name="appNormalColor"/>
+                                                <color key="textColor" name="appNormalTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRO-Cz-Wcm">
-                                                <rect key="frame" x="173" y="0.0" width="112" height="30"/>
+                                                <rect key="frame" x="151" y="0.0" width="101" height="30"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Create account">
-                                                    <color key="titleColor" name="appTitleColor"/>
+                                                <state key="normal" title="Register now!">
+                                                    <color key="titleColor" name="appHeaderTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didPressRegister:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ddp-vI-tXC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -128,6 +123,13 @@
                             <constraint firstItem="Feb-3h-Def" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="swy-5M-FHz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="VnY-q7-jzP" id="a6v-Vk-SkL"/>
+                        <outlet property="loginButton" destination="hfl-5h-ECh" id="cxm-Ck-9aP"/>
+                        <outlet property="passwordTextField" destination="1cY-jY-CdT" id="OQN-sD-aNN"/>
+                        <outletCollection property="inputTextFields" destination="VnY-q7-jzP" collectionClass="NSMutableArray" id="8W1-XM-4at"/>
+                        <outletCollection property="inputTextFields" destination="1cY-jY-CdT" collectionClass="NSMutableArray" id="HTY-9u-aFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,17 +141,20 @@
         <namedColor name="appBackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="appNormalColor">
+        <namedColor name="appHeaderTextColor">
+            <color red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appNormalTextColor">
             <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="appTextColor">
+        <namedColor name="appTextFieldBackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appThemeColor">
             <color red="0.13333333333333333" green="0.3411764705882353" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="appTitleColor">
-            <color red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="appThemeTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

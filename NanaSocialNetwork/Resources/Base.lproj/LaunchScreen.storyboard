@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxj-gY-cA3">
                                 <rect key="frame" x="20" y="369.5" width="374" height="167.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="140"/>
-                                <color key="textColor" name="appBackgroundColor"/>
+                                <color key="textColor" name="appThemeTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -39,11 +39,11 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="appBackgroundColor">
-            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="appThemeColor">
             <color red="0.13333333333333333" green="0.3411764705882353" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appThemeTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
