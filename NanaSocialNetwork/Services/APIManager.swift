@@ -7,39 +7,20 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
 
 // MARK: - Api Manager
 final class APIManager: NSObject {
+    // Global instance
     static let shared = APIManager()
+    
+    // Firestore instance
+    let db = Firestore.firestore()
 }
 
-// MARK: - Firebase Authentication
-enum LoginError {
-    case wrongPassword
-    case invalidEmail
-    case unknown
-}
-
+// MARK: - Authetication User
 extension APIManager {
-    /**
-     completion block: return 2 parameters
-     param 1: Success - (true: sucess, false fail)
-     param 2 LoginError - Wrong password, invalid email or unknown
-     **/
-    func login(withEmail email: String, password: String, completion: @escaping (Bool, LoginError?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            if let error = error as NSError? {
-                switch error.code {
-                case AuthErrorCode.wrongPassword.rawValue:
-                    completion(false, .wrongPassword)
-                case AuthErrorCode.invalidEmail.rawValue:
-                    completion(false, .invalidEmail)
-                default:
-                    completion(false, .unknown)
-                }
-            } else {
-                completion(true, nil)
-            }
-        }
+    var authUser: User? {
+        return Auth.auth().currentUser
     }
 }

@@ -61,6 +61,9 @@ class LoginViewController: UIViewController {
         case .error(let error):
             AppLoading.shared.hideLoading()
             showLoginError(error)
+        case .success:
+            AppLoading.shared.hideLoading()
+            showHomeScreen()
         default:
             AppLoading.shared.hideLoading()
         }

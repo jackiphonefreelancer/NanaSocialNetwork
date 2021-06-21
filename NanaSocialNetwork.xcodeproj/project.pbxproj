@@ -27,6 +27,10 @@
 		8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFFD267F41F900F39706 /* AppLoading.swift */; };
 		8DE6B002267F468300F39706 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B001267F468300F39706 /* UIViewController+Ex.swift */; };
 		8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B009267F78C000F39706 /* LoginTests.swift */; };
+		8DE6B0122680183A00F39706 /* APIManager+FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0112680183900F39706 /* APIManager+FirebaseAuth.swift */; };
+		8DE6B0142680188D00F39706 /* APIManager+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0132680188D00F39706 /* APIManager+Firestore.swift */; };
+		8DE6B0172680233300F39706 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0162680233200F39706 /* User.swift */; };
+		8DE6B0192680292400F39706 /* Error+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0182680292400F39706 /* Error+Ex.swift */; };
 		E37B6020178EF22C4273A94D /* Pods_NanaSocialNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,10 @@
 		8DE6B007267F78BF00F39706 /* NanaSocialNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanaSocialNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6B009267F78C000F39706 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		8DE6B00B267F78C000F39706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DE6B0112680183900F39706 /* APIManager+FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+FirebaseAuth.swift"; sourceTree = "<group>"; };
+		8DE6B0132680188D00F39706 /* APIManager+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Firestore.swift"; sourceTree = "<group>"; };
+		8DE6B0162680233200F39706 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8DE6B0182680292400F39706 /* Error+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Ex.swift"; sourceTree = "<group>"; };
 		E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,7 +176,10 @@
 		8DE6AFDA267E1F8800F39706 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8DE6B0152680231C00F39706 /* ApiModels */,
 				8DE6AFF8267F39B300F39706 /* APIManager.swift */,
+				8DE6B0112680183900F39706 /* APIManager+FirebaseAuth.swift */,
+				8DE6B0132680188D00F39706 /* APIManager+Firestore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6AFFB267F415E00F39706 /* String+Ex.swift */,
+				8DE6B0182680292400F39706 /* Error+Ex.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -261,6 +273,14 @@
 				8DE6B00B267F78C000F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetworkTests;
+			sourceTree = "<group>";
+		};
+		8DE6B0152680231C00F39706 /* ApiModels */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6B0162680233200F39706 /* User.swift */,
+			);
+			path = ApiModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,10 +479,14 @@
 				8DE6AFF9267F39B300F39706 /* APIManager.swift in Sources */,
 				8DE6AFF0267EC14E00F39706 /* LoginViewModel.swift in Sources */,
 				8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */,
+				8DE6B0172680233300F39706 /* User.swift in Sources */,
 				8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */,
 				8DE6AFF3267EC28900F39706 /* AppTextField.swift in Sources */,
+				8DE6B0192680292400F39706 /* Error+Ex.swift in Sources */,
 				8DE6AFF5267EC2D400F39706 /* UIView+Ex.swift in Sources */,
 				8DE6AFF7267EC33100F39706 /* UIColor+Style.swift in Sources */,
+				8DE6B0142680188D00F39706 /* APIManager+Firestore.swift in Sources */,
+				8DE6B0122680183A00F39706 /* APIManager+FirebaseAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
