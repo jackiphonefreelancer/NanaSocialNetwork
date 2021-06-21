@@ -44,7 +44,7 @@ extension LoginTests {
 //MARK: - Test: Login
 extension LoginTests {
     func testLoginSuccess() throws {
-        let expectation = self.expectation(description: "LoginTests_Login")
+        let expectation = self.expectation(description: "LoginTests")
         var result = false
 
         APIManager.shared.login(withEmail: "test1@nana.com", password: "123456", completion: { (success, error) in
@@ -57,7 +57,7 @@ extension LoginTests {
     }
     
     func testLoginFail() throws {
-        let expectation = self.expectation(description: "LoginTests_Login")
+        let expectation = self.expectation(description: "LoginTests")
         var result = false
 
         APIManager.shared.login(withEmail: "test1@nana.com", password: "12345", completion: { (success, error) in

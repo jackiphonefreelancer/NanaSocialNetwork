@@ -34,6 +34,7 @@
 		8DE6B01C2680436800F39706 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B01B2680436800F39706 /* RegisterViewController.swift */; };
 		8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B01D2680437B00F39706 /* RegisterViewModel.swift */; };
 		8DE6B02126804B6D00F39706 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02026804B6D00F39706 /* AppRouter.swift */; };
+		8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B022268067C900F39706 /* RegisterTests.swift */; };
 		E37B6020178EF22C4273A94D /* Pods_NanaSocialNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		8DE6B01B2680436800F39706 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8DE6B01D2680437B00F39706 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8DE6B02026804B6D00F39706 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		8DE6B022268067C900F39706 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
 		E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6B009267F78C000F39706 /* LoginTests.swift */,
+				8DE6B022268067C900F39706 /* RegisterTests.swift */,
 				8DE6B00B267F78C000F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetworkTests;
@@ -522,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */,
 				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
