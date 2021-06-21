@@ -1,23 +1,24 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  NanaSocialNetwork
 //
-//  Created by Teerapat on 6/19/21.
+//  Created by Teerapat on 6/21/21.
 //
 
 import UIKit
 import RxSwift
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
     // IBOutlet
     @IBOutlet weak var emailTextField: AppTextField!
     @IBOutlet weak var passwordTextField: AppTextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var displayNameTextField: AppTextField!
+    @IBOutlet weak var createButton: UIButton!
     @IBOutlet var inputTextFields: [UITextField]!
     
     // Variables
-    private let viewModel = LoginViewModel()
+    private let viewModel = RegisterViewModel()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class LoginViewController: UIViewController {
         // Update placeholder
         emailTextField.placeholder = "Email"
         passwordTextField.placeholder = "Password"
+        displayNameTextField.placeholder = "Display name"
         
         // Validate Input
         inputTextFields.forEach { textField in
@@ -45,7 +47,7 @@ class LoginViewController: UIViewController {
                 self?.updateState(state)
             }
             .disposed(by: disposeBag)
-        
+
         viewModel.buttonState
             .subscribe { [weak self] isValid in
                 self?.updateButtonState(isValid)
@@ -54,67 +56,75 @@ class LoginViewController: UIViewController {
     }
     
     // Update State
-    func updateState(_ state: LoginViewModel.State) {
+    func updateState(_ state: RegisterViewModel.State) {
         switch state {
         case .loading:
-            AppLoading.shared.showLoading()
+            AppLoading.shared.showLoading(in: self)
         case .error(let error):
             AppLoading.shared.hideLoading()
             showLoginError(error)
         case .success:
             AppLoading.shared.hideLoading()
-            showToastMessage("Login success!")
-            showHomeScreen()
+            showToastMessage("Register success!")
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: { [weak self] in
+                self?.dismissScreen()
+            })
         default:
             AppLoading.shared.hideLoading()
         }
     }
     
     func updateButtonState(_ isValid: Bool) {
-        isValid == true ? loginButton.unlock() : loginButton.lock()
+        isValid == true ? createButton.unlock() : createButton.lock()
     }
 }
 
 //MARK: - IBAction
-extension LoginViewController {
-    @IBAction func didPressLogin(_ sender: Any) {
+extension RegisterViewController {
+    @IBAction func didPressCreate(_ sender: Any) {
         view.endEditing(true) // Hide keyboard
-        viewModel.login()
+        viewModel.createUser()
     }
     
-    @IBAction func didPressRegister(_ sender: Any) {
-        showRegisterScreen()
+    @IBAction func didPressClose(_ sender: Any) {
+        dismissScreen()
     }
     
     @objc func textChanged(_ textField: UITextField) {
         let text = textField.text
-        textField == emailTextField
-            ? viewModel.updateEmail(text)
-            : viewModel.updatePaswword(text)
+        switch textField {
+        case emailTextField:
+            viewModel.updateEmail(text)
+        case passwordTextField:
+            viewModel.updatePaswword(text)
+        case displayNameTextField:
+            viewModel.updateDisplayname(text)
+        default:
+            break
+        }
     }
 }
 
 //MARK: - Dialog & Router
-extension LoginViewController {
-    func showLoginError(_ error: LoginError) {
+extension RegisterViewController {
+    func showLoginError(_ error: CreateUserError) {
         switch error {
-        case .invalidEmail,. wrongPassword:
-            showErrorDialog(title: "Authentication Failed", message: "Invalid email or password")
+        case .emailAlreadyInUse:
+            showErrorDialog(title: "Create User Failed", message: "This email already in use, please signup with another email.")
+        case .weakPassword:
+            showErrorDialog(title: "Create User Failed", message: "This password is too weak, please use new password.")
         default:
             showErrorDialog(title: "Error", message: "Please try again later.")
         }
     }
     
-    func showRegisterScreen() {
-        AppRouter.shared.present(with: RegisterViewController.storyboardInstance())
-    }
-    
-    func showHomeScreen() {
+    func dismissScreen() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
 //MARK: - UITextfield Delegate
-extension LoginViewController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let idx = inputTextFields.firstIndex(of: textField) else {
             return true
@@ -130,9 +140,9 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 //MARK: - Storyboard
-extension LoginViewController {
-    static func storyboardInstance() -> LoginViewController {
-        return UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
-            as! LoginViewController
+extension RegisterViewController {
+    static func storyboardInstance() -> RegisterViewController {
+        return UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "RegisterViewController")
+            as! RegisterViewController
     }
 }

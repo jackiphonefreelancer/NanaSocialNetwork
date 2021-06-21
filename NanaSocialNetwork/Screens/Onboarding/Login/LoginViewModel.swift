@@ -63,7 +63,6 @@ extension LoginViewModel {
             if let error = error {
                 self?.state.onNext(.error(error))
             } else {
-                // Once login is success, try to fetch user info
                 self?.state.onNext(.success)
             }
         })

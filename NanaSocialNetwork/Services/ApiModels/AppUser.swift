@@ -9,7 +9,7 @@ import Foundation
 
 struct AppUser: Codable {
     var uid: String
-    var username: String
+    var displayname: String
     var createdAt: Date
     var avatar: String?
 }

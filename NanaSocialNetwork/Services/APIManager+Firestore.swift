@@ -11,6 +11,20 @@ import FirebaseFirestoreSwift
 
 // MARK: - Firebase Firestore
 extension APIManager {
+    func createAppUserIfNeeded(uid: String, displayName: String, completion: @escaping (Bool, Error?) -> Void) {
+        let docRef = db.collection("Users").document(uid)
+        docRef.setData([ "uid": uid,
+                         "displayname": displayName,
+                         "createdAt": Date()
+        ]) { error in
+            if let error = error {
+                completion(false, error)
+            } else {
+                completion(true, nil)
+            }
+        }
+    }
+    
     func fetchUserInfo(completion: @escaping (AppUser?, Error?) -> Void) {
         guard let authUser = authUser else {
             completion(nil, NSError.unknown)
