@@ -12,6 +12,7 @@ class FeedViewController: UIViewController {
 
     // IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     // Variables
     private let viewModel = FeedViewModel()
@@ -30,6 +31,10 @@ class FeedViewController: UIViewController {
         // Configure Refresh Control
         refreshControl.tintColor = UIColor(.appHeaderTextColor)
         refreshControl.addTarget(self, action: #selector(self.pullToRefresh(_:)), for: .valueChanged)
+        
+        // Configure Segmented Control
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor(.appThemeColor)], for: .normal)
+        segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor(.appThemeTextColor)], for: .selected)
         
         // Configure TableView
         tableView.registerCell(FeedItemCell.self)
@@ -53,9 +58,11 @@ class FeedViewController: UIViewController {
         case .error:
             refreshControl.endRefreshing()
             showError()
-        case .success:
+        case .success, .reload:
             refreshControl.endRefreshing()
             tableView.reloadData()
+        case .deleted:
+            showToastMessage("You post is deleted successfully")
         default:
             refreshControl.endRefreshing()
         }
@@ -70,12 +77,27 @@ extension FeedViewController {
     
     @IBAction func didPressAdd(_ sender: Any) {
     }
+    
+    @IBAction func didSwichSegment(_ sender: UISegmentedControl) {
+        viewModel.updateFeedType(at: sender.selectedSegmentIndex)
+    }
 }
 
 //MARK: - Dialog & Router
 extension FeedViewController {
     func showError() {
         showErrorDialog(title: "Error", message: "Please try again later.")
+    }
+    
+    func showDeleteConfirmationDialog(postId: String) {
+        let okAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
+            self.viewModel.deletePost(id: postId)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to delete this post?", preferredStyle: .alert)
+        alert.addAction(okAction)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -88,6 +110,14 @@ extension FeedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(FeedItemCell.self, at: indexPath)
         cell.fill(viewModel.feedItem(at: indexPath.row))
+        cell.deleteTapped = { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            if let postId = strongSelf.viewModel.getDoucmentId(at: indexPath.row) {
+                strongSelf.showDeleteConfirmationDialog(postId: postId)
+            }
+        }
         return cell
     }
 }

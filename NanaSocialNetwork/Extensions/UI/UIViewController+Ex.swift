@@ -21,20 +21,12 @@ extension UIViewController {
 //MARK: - Toast Message
 extension UIViewController {
     func showToastMessage(_ message: String, duration: Double = 2.0){
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
-        toastLabel.backgroundColor = UIColor(.appThemeColor)
-        toastLabel.textColor = UIColor(.appThemeTextColor)
-        toastLabel.textAlignment = .center;
-        toastLabel.font = UIFont.systemFont(ofSize: 16.0)
-        toastLabel.text = message
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = 10;
-        toastLabel.clipsToBounds  =  true
-        self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: duration, delay: 0.1, options: .curveEaseOut, animations: {
-            toastLabel.alpha = 0.0
-        }, completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
-        })
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor(.appTextFieldBackgroundColor)
+        alert.view.layer.cornerRadius = 15.0
+        self.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
     }
 }

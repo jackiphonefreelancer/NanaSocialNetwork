@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct FeedItem: Codable {
+    @DocumentID var id: String? 
     var content: String
     var createdAt: Date
     var ownerId: String

@@ -34,9 +34,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nh5-yI-ATr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NdF-A1-a5q">
+                                <rect key="frame" x="20" y="44" width="374" height="36"/>
+                                <color key="backgroundColor" name="appThemeTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0z6-bL-HI3"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Timelines"/>
+                                    <segment title="My Posts"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="appThemeColor"/>
+                                <connections>
+                                    <action selector="didSwichSegment:" destination="AbH-IT-zdw" eventType="valueChanged" id="bGg-QZ-BCd"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nh5-yI-ATr">
+                                <rect key="frame" x="0.0" y="79" width="414" height="734"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="AbH-IT-zdw" id="qCc-2R-b3M"/>
@@ -73,16 +88,20 @@
                         <viewLayoutGuide key="safeArea" id="zyB-iI-wA3"/>
                         <color key="backgroundColor" name="appBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NdF-A1-a5q" firstAttribute="top" secondItem="zyB-iI-wA3" secondAttribute="top" id="10g-u8-0jS"/>
                             <constraint firstItem="zyB-iI-wA3" firstAttribute="trailing" secondItem="Nh5-yI-ATr" secondAttribute="trailing" id="6m1-dY-6pQ"/>
                             <constraint firstItem="Nh5-yI-ATr" firstAttribute="leading" secondItem="zyB-iI-wA3" secondAttribute="leading" id="9rV-d2-x8e"/>
+                            <constraint firstItem="zyB-iI-wA3" firstAttribute="trailing" secondItem="NdF-A1-a5q" secondAttribute="trailing" constant="20" id="DAl-3h-pAk"/>
                             <constraint firstItem="zyB-iI-wA3" firstAttribute="trailing" secondItem="5Hr-AN-rA2" secondAttribute="trailing" constant="20" id="DfZ-Q8-5a9"/>
-                            <constraint firstItem="Nh5-yI-ATr" firstAttribute="top" secondItem="zyB-iI-wA3" secondAttribute="top" id="SgK-bu-xcY"/>
+                            <constraint firstItem="NdF-A1-a5q" firstAttribute="leading" secondItem="zyB-iI-wA3" secondAttribute="leading" constant="20" id="Z5p-5w-GtK"/>
+                            <constraint firstItem="Nh5-yI-ATr" firstAttribute="top" secondItem="NdF-A1-a5q" secondAttribute="bottom" id="pex-Ax-tH7"/>
                             <constraint firstItem="zyB-iI-wA3" firstAttribute="bottom" secondItem="5Hr-AN-rA2" secondAttribute="bottom" constant="20" id="qEs-y1-WcF"/>
                             <constraint firstItem="zyB-iI-wA3" firstAttribute="bottom" secondItem="Nh5-yI-ATr" secondAttribute="bottom" id="qZP-Hn-ykd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="tabbar_feed" id="AqL-2U-ek1"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="NdF-A1-a5q" id="9GD-dI-wZM"/>
                         <outlet property="tableView" destination="Nh5-yI-ATr" id="RMb-QQ-hct"/>
                     </connections>
                 </viewController>

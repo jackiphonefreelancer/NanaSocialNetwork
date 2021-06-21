@@ -55,11 +55,29 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icw-tE-oh3">
+                                <rect key="frame" x="353" y="10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="SEJ-d0-iw2"/>
+                                    <constraint firstAttribute="height" constant="20" id="fXZ-aL-Ru3"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="bin"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didPressDelete:" destination="QOS-UL-kR5" eventType="touchUpInside" id="MPi-Ux-UDG"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" name="appBackgroundColor"/>
+                        <color key="backgroundColor" name="appTextFieldBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="icw-tE-oh3" firstAttribute="top" secondItem="77g-ZU-FMd" secondAttribute="top" constant="10" id="3ck-SI-tgO"/>
                             <constraint firstItem="pIn-Jl-dro" firstAttribute="top" secondItem="77g-ZU-FMd" secondAttribute="top" constant="16" id="8KJ-Fa-yKe"/>
                             <constraint firstAttribute="bottom" secondItem="pIn-Jl-dro" secondAttribute="bottom" constant="16" id="8c7-es-pIq"/>
+                            <constraint firstAttribute="trailing" secondItem="icw-tE-oh3" secondAttribute="trailing" constant="10" id="HUn-eP-QbP"/>
                             <constraint firstItem="pIn-Jl-dro" firstAttribute="leading" secondItem="77g-ZU-FMd" secondAttribute="leading" constant="16" id="kKg-Wq-WS8"/>
                             <constraint firstAttribute="trailing" secondItem="pIn-Jl-dro" secondAttribute="trailing" constant="16" id="t84-FB-mbo"/>
                         </constraints>
@@ -94,20 +112,22 @@
                 <outlet property="containerView" destination="77g-ZU-FMd" id="wnh-0j-Esa"/>
                 <outlet property="contentTextLabel" destination="xm8-dq-eEW" id="w8f-jB-NJJ"/>
                 <outlet property="dateLabel" destination="FfB-DT-T6J" id="BqH-nt-VTP"/>
+                <outlet property="deleteButton" destination="icw-tE-oh3" id="QI1-JK-zLo"/>
                 <outlet property="displayNameLabel" destination="vZL-S5-Fdf" id="zsw-Tm-cKl"/>
             </connections>
             <point key="canvasLocation" x="-126.81159420289856" y="56.919642857142854"/>
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="appBackgroundColor">
-            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="bin" width="48" height="48"/>
         <namedColor name="appHeaderTextColor">
             <color red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appNormalTextColor">
             <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appTextFieldBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

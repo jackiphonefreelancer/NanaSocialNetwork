@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-// MARK: - Firebase Firestore
+// MARK: - Firebase Firestore - Users
 extension APIManager {
     func createAppUserIfNeeded(uid: String, displayName: String, completion: @escaping (Bool, Error?) -> Void) {
         let docRef = db.collection("Users").document(uid)
@@ -51,7 +51,10 @@ extension APIManager {
             }
         }
     }
-    
+}
+
+// MARK: - Firebase Firestore - Posts
+extension APIManager {
     func fetchFeedList(completion: @escaping ([FeedItem], Error?) -> Void) {
         let postsRef = db.collection("Posts")
         postsRef.order(by: "createdAt", descending: true).getDocuments { (snapshot, error) in
@@ -66,6 +69,16 @@ extension APIManager {
                 } else {
                     completion([], NSError.unknown)
                 }
+            }
+        }
+    }
+    
+    func deletePost(postId: String, completion: @escaping (Error?) -> Void) {
+        db.collection("Posts").document(postId).delete() { error in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
             }
         }
     }
