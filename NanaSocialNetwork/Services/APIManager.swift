@@ -16,6 +16,18 @@ final class APIManager: NSObject {
     
     // Firestore instance
     let db = Firestore.firestore()
+    
+    override init() {
+        super.init()
+        configureFirestoreSettings()
+    }
+    
+    func configureFirestoreSettings() {
+        // Enable offline data persistence
+        let settings = FirestoreSettings()
+        settings.isPersistenceEnabled = true
+        db.settings = settings
+    }
 }
 
 // MARK: - Authetication User

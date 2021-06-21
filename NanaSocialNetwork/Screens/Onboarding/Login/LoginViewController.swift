@@ -110,6 +110,7 @@ extension LoginViewController {
     }
     
     func showHomeScreen() {
+        AppRouter.shared.presentAsRoot(with: AppTabBarController.storyboardInstance())
     }
 }
 

@@ -35,6 +35,14 @@
 		8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B01D2680437B00F39706 /* RegisterViewModel.swift */; };
 		8DE6B02126804B6D00F39706 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02026804B6D00F39706 /* AppRouter.swift */; };
 		8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B022268067C900F39706 /* RegisterTests.swift */; };
+		8DE6B02726806C1F00F39706 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02626806C1E00F39706 /* FeedViewController.swift */; };
+		8DE6B02926806C3000F39706 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02826806C3000F39706 /* FeedViewModel.swift */; };
+		8DE6B02B26806F9F00F39706 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02A26806F9F00F39706 /* AppTabBarController.swift */; };
+		8DE6B02E268076B600F39706 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B02D268076B500F39706 /* FeedItem.swift */; };
+		8DE6B03326808D9400F39706 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B03126808D9300F39706 /* FeedItemCell.swift */; };
+		8DE6B03426808D9400F39706 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE6B03226808D9300F39706 /* FeedItemCell.xib */; };
+		8DE6B0362680951500F39706 /* NibInstanceable+Reuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0352680951500F39706 /* NibInstanceable+Reuseable.swift */; };
+		8DE6B0382680963900F39706 /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6B0372680963900F39706 /* Date+Ex.swift */; };
 		E37B6020178EF22C4273A94D /* Pods_NanaSocialNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C382F8E5F281482C0DC2E6F /* Pods_NanaSocialNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +93,14 @@
 		8DE6B01D2680437B00F39706 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8DE6B02026804B6D00F39706 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		8DE6B022268067C900F39706 /* RegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTests.swift; sourceTree = "<group>"; };
+		8DE6B02626806C1E00F39706 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		8DE6B02826806C3000F39706 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		8DE6B02A26806F9F00F39706 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		8DE6B02D268076B500F39706 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		8DE6B03126808D9300F39706 /* FeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
+		8DE6B03226808D9300F39706 /* FeedItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedItemCell.xib; sourceTree = "<group>"; };
+		8DE6B0352680951500F39706 /* NibInstanceable+Reuseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NibInstanceable+Reuseable.swift"; sourceTree = "<group>"; };
+		8DE6B0372680963900F39706 /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		E75C5C0123890D9B4D2C8CC4 /* Pods-NanaSocialNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetworkTests/Pods-NanaSocialNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +167,6 @@
 		8DE6AFC3267E186300F39706 /* NanaSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8DE6B01F26804B5C00F39706 /* Router */,
 				8DE6AFF1267EC22D00F39706 /* CommonViews */,
 				8DE6AFDB267E1F9100F39706 /* Extensions */,
 				8DE6AFDC267E1F9900F39706 /* Configurations */,
@@ -234,6 +249,8 @@
 		8DE6AFE4267E213600F39706 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8DE6B02526806BB500F39706 /* Profile */,
+				8DE6B02426806B9A00F39706 /* Feed */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -245,6 +262,7 @@
 				8DE6AFF4267EC2D400F39706 /* UIView+Ex.swift */,
 				8DE6AFF6267EC33100F39706 /* UIColor+Style.swift */,
 				8DE6B001267F468300F39706 /* UIViewController+Ex.swift */,
+				8DE6B0352680951500F39706 /* NibInstanceable+Reuseable.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -261,8 +279,10 @@
 		8DE6AFF1267EC22D00F39706 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				8DE6B02C26806FF000F39706 /* Router */,
 				8DE6AFF2267EC28900F39706 /* AppTextField.swift */,
 				8DE6AFFD267F41F900F39706 /* AppLoading.swift */,
+				8DE6B02A26806F9F00F39706 /* AppTabBarController.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -272,6 +292,7 @@
 			children = (
 				8DE6AFFB267F415E00F39706 /* String+Ex.swift */,
 				8DE6B0182680292400F39706 /* Error+Ex.swift */,
+				8DE6B0372680963900F39706 /* Date+Ex.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -290,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6B0162680233200F39706 /* AppUser.swift */,
+				8DE6B02D268076B500F39706 /* FeedItem.swift */,
 			);
 			path = ApiModels;
 			sourceTree = "<group>";
@@ -303,12 +325,38 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		8DE6B01F26804B5C00F39706 /* Router */ = {
+		8DE6B02426806B9A00F39706 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6B02F26808D5200F39706 /* Cells */,
+				8DE6B02826806C3000F39706 /* FeedViewModel.swift */,
+				8DE6B02626806C1E00F39706 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		8DE6B02526806BB500F39706 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8DE6B02C26806FF000F39706 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				8DE6B02026804B6D00F39706 /* AppRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8DE6B02F26808D5200F39706 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8DE6B03126808D9300F39706 /* FeedItemCell.swift */,
+				8DE6B03226808D9300F39706 /* FeedItemCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE6B03426808D9400F39706 /* FeedItemCell.xib in Resources */,
 				8DE6AFE0267E208B00F39706 /* Onboarding.storyboard in Resources */,
 				8DE6AFE6267E215000F39706 /* Home.storyboard in Resources */,
 				8DE6AFE2267E20AA00F39706 /* Colors.xcassets in Resources */,
@@ -499,8 +548,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE6B03326808D9400F39706 /* FeedItemCell.swift in Sources */,
 				8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */,
+				8DE6B02B26806F9F00F39706 /* AppTabBarController.swift in Sources */,
+				8DE6B0362680951500F39706 /* NibInstanceable+Reuseable.swift in Sources */,
 				8DE6B002267F468300F39706 /* UIViewController+Ex.swift in Sources */,
+				8DE6B02726806C1F00F39706 /* FeedViewController.swift in Sources */,
 				8DE6B02126804B6D00F39706 /* AppRouter.swift in Sources */,
 				8DE6AFFC267F415E00F39706 /* String+Ex.swift in Sources */,
 				8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */,
@@ -508,11 +561,14 @@
 				8DE6AFF9267F39B300F39706 /* APIManager.swift in Sources */,
 				8DE6AFF0267EC14E00F39706 /* LoginViewModel.swift in Sources */,
 				8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */,
+				8DE6B02E268076B600F39706 /* FeedItem.swift in Sources */,
 				8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */,
 				8DE6B0172680233300F39706 /* AppUser.swift in Sources */,
 				8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */,
 				8DE6AFF3267EC28900F39706 /* AppTextField.swift in Sources */,
+				8DE6B02926806C3000F39706 /* FeedViewModel.swift in Sources */,
 				8DE6B0192680292400F39706 /* Error+Ex.swift in Sources */,
+				8DE6B0382680963900F39706 /* Date+Ex.swift in Sources */,
 				8DE6AFF5267EC2D400F39706 /* UIView+Ex.swift in Sources */,
 				8DE6B01C2680436800F39706 /* RegisterViewController.swift in Sources */,
 				8DE6AFF7267EC33100F39706 /* UIColor+Style.swift in Sources */,

@@ -11,7 +11,7 @@ final class AppRouter {
     static let shared = AppRouter()
     
     func presentAsRoot(with viewController: UIViewController) {
-        UIApplication.shared.keyWindow?.rootViewController = viewController
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = viewController
     }
     
     func present(with viewController: UIViewController) {

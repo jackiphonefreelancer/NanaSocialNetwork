@@ -51,4 +51,22 @@ extension APIManager {
             }
         }
     }
+    
+    func fetchFeedList(completion: @escaping ([FeedItem], Error?) -> Void) {
+        let postsRef = db.collection("Posts")
+        postsRef.order(by: "createdAt", descending: true).getDocuments { (snapshot, error) in
+            if let error = error {
+                completion([], error)
+            } else {
+                if let snapshot = snapshot {
+                    let results = snapshot.documents.compactMap({ document in
+                        return try? document.data(as: FeedItem.self)
+                    })
+                    completion(results, nil)
+                } else {
+                    completion([], NSError.unknown)
+                }
+            }
+        }
+    }
 }
