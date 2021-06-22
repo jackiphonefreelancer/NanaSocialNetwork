@@ -50,7 +50,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Cyz-rc-AHd">
                                         <rect key="frame" x="0.0" y="39.5" width="334" height="19.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joined At" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-Ml-xeP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joined" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-Ml-xeP">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="19.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="t7Q-DX-IT3"/>

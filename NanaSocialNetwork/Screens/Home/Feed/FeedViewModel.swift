@@ -57,7 +57,7 @@ extension FeedViewModel {
         let feed = filteredFeeds[index]
         return FeedItemCellViewModel(displayName: feed.ownerName,
                                      text: feed.content,
-                                     date: getDateTimeString(feed.createdAt),
+                                     date: feed.createdAt.timeAgoDisplay(),
                                      canDelete: feed.ownerId == Auth.auth().currentUser?.uid)
     }
     
@@ -73,18 +73,6 @@ extension FeedViewModel {
             self.feedType = .timeline
         } else {
             self.feedType = .myPosts
-        }
-    }
-    
-    func getDateTimeString(_ date: Date) -> String {
-        let timeString = date.string(format: "HH:mm")
-        if Calendar.current.isDateInToday(date) {
-            return String(format: "%@ at %@", "Today",timeString)
-        } else if Calendar.current.isDateInYesterday(date) {
-            return String(format: "%@ at %@", "Yesterday",timeString)
-        } else {
-            let dateString = date.string(format: "MMMM dd yyyy")
-            return String(format: "%@ at %@", dateString,timeString)
         }
     }
 }

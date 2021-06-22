@@ -21,6 +21,8 @@ class RegisterViewController: UIViewController {
     private let viewModel = RegisterViewModel()
     private let disposeBag = DisposeBag()
     
+    var userCreated: ((String?) -> Void)? // retrun with registed email
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -64,6 +66,8 @@ class RegisterViewController: UIViewController {
             AppLoading.shared.hideLoading()
             showLoginError(error)
         case .success:
+            let registedEmail = emailTextField.text
+            userCreated?(registedEmail)
             AppLoading.shared.hideLoading()
             AppRouter.shared.dismiss()
         default:

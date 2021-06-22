@@ -15,7 +15,6 @@ final class AppRouter {
     }
     
     func present(with viewController: UIViewController) {
-        viewController.modalPresentationStyle = .fullScreen
         UIApplication.getTopViewController()?.present(viewController, animated: true, completion: nil)
     }
     

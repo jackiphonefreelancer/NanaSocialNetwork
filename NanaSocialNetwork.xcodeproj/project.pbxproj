@@ -188,7 +188,7 @@
 		8DE6AFC3267E186300F39706 /* NanaSocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				8DE6AFF1267EC22D00F39706 /* CommonViews */,
+				8DE6AFF1267EC22D00F39706 /* Commons */,
 				8DE6AFDB267E1F9100F39706 /* Extensions */,
 				8DE6AFDC267E1F9900F39706 /* Configurations */,
 				8DE6AFD8267E1F5E00F39706 /* Application */,
@@ -299,7 +299,7 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		8DE6AFF1267EC22D00F39706 /* CommonViews */ = {
+		8DE6AFF1267EC22D00F39706 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
 				8DE6B02C26806FF000F39706 /* Router */,
@@ -307,7 +307,7 @@
 				8DE6AFFD267F41F900F39706 /* AppLoading.swift */,
 				8DE6B02A26806F9F00F39706 /* AppTabBarController.swift */,
 			);
-			path = CommonViews;
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		8DE6AFFA267F414F00F39706 /* Foundation */ = {

@@ -105,7 +105,13 @@ extension LoginViewController {
     }
     
     func showRegisterScreen() {
-        AppRouter.shared.present(with: RegisterViewController.storyboardInstance())
+        let vc = RegisterViewController.storyboardInstance()
+        vc.userCreated = { [weak self] registedEmail in
+            self?.emailTextField.text = registedEmail
+            self?.viewModel.updateEmail(registedEmail)
+        }
+        
+        AppRouter.shared.present(with: vc)
     }
     
     func showHomeScreen() {
