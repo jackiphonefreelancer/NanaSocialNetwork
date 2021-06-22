@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36B2FACF7B7B1C46DA093B41 /* Pods_NanaSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */; };
+		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
 		8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC4267E186300F39706 /* AppDelegate.swift */; };
 		8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC6267E186300F39706 /* SceneDelegate.swift */; };
 		8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* LoginViewController.swift */; };
@@ -62,6 +63,7 @@
 		3C53E1D909988D6405D2A814 /* Pods-NanaSocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NanaSocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
 		8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanaSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6AFC4267E186300F39706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC6267E186300F39706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			children = (
 				8DE6B009267F78C000F39706 /* LoginTests.swift */,
 				8DE6B022268067C900F39706 /* RegisterTests.swift */,
+				8DC140BE26816C2600366F08 /* ApiTests.swift */,
 				8DE6B00B267F78C000F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetworkTests;
@@ -583,6 +586,7 @@
 			files = (
 				8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */,
 				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
+				8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

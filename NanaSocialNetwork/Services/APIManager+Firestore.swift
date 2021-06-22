@@ -25,13 +25,8 @@ extension APIManager {
         }
     }
     
-    func fetchUserInfo(completion: @escaping (AppUser?, Error?) -> Void) {
-        guard let authUser = authUser else {
-            completion(nil, NSError.unknown)
-            return
-        }
-        
-        let docRef = db.collection("Users").document(authUser.uid)
+    func fetchUserInfo(uid: String, completion: @escaping (AppUser?, Error?) -> Void) {
+        let docRef = db.collection("Users").document(uid)
 
         docRef.getDocument { (document, error) in
             if let error = error {
