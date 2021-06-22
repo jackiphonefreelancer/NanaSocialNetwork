@@ -65,10 +65,7 @@ class RegisterViewController: UIViewController {
             showLoginError(error)
         case .success:
             AppLoading.shared.hideLoading()
-            showToastMessage("Register success!")
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: { [weak self] in
-                self?.dismissScreen()
-            })
+            AppRouter.shared.dismiss()
         default:
             AppLoading.shared.hideLoading()
         }
@@ -87,7 +84,7 @@ extension RegisterViewController {
     }
     
     @IBAction func didPressClose(_ sender: Any) {
-        dismissScreen()
+        AppRouter.shared.dismiss()
     }
     
     @objc func textChanged(_ textField: UITextField) {
@@ -116,10 +113,6 @@ extension RegisterViewController {
         default:
             showErrorDialog(title: "Error", message: "Please try again later.")
         }
-    }
-    
-    func dismissScreen() {
-        dismiss(animated: true, completion: nil)
     }
 }
 

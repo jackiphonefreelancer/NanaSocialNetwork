@@ -86,7 +86,7 @@ extension RegisterViewModel {
     
     func createAppUserIfNeeded(uid: String) {
         state.onNext(.loading)
-        APIManager.shared.createAppUserIfNeeded(uid: uid, displayName: displayname!, completion: { [weak self] (uid, error) in
+        APIManager.shared.createAppUserIfNeeded(uid: uid, displayName: displayname!, completion: { [weak self] (error) in
             if let _ = error {
                 self?.state.onNext(.error(.unknown))
             } else {

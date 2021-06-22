@@ -9,7 +9,6 @@ import Foundation
 import FirebaseFirestoreSwift
 
 struct AppUser: Codable {
-    @DocumentID var id: String? 
     var uid: String
     var displayname: String
     var createdAt: Date

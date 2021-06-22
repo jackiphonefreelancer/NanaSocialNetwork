@@ -109,6 +109,46 @@
             </objects>
             <point key="canvasLocation" x="1474" y="-229"/>
         </scene>
+        <!--Create Post View Controller-->
+        <scene sceneID="WgZ-8s-SMv">
+            <objects>
+                <viewController storyboardIdentifier="CreatePostViewController" id="Rce-qa-IdU" customClass="CreatePostViewController" customModule="NanaSocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yi3-jx-u28">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LnS-Nt-JqE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" name="appBackgroundColor"/>
+                                <color key="tintColor" name="appThemeColor"/>
+                                <color key="textColor" name="appHeaderTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Rce-qa-IdU" id="KfD-SK-p7u"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yjo-cb-vJw"/>
+                        <color key="backgroundColor" name="appBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yjo-cb-vJw" firstAttribute="trailing" secondItem="LnS-Nt-JqE" secondAttribute="trailing" id="6OL-1z-64e"/>
+                            <constraint firstItem="LnS-Nt-JqE" firstAttribute="leading" secondItem="yjo-cb-vJw" secondAttribute="leading" id="SK1-4A-aOC"/>
+                            <constraint firstItem="LnS-Nt-JqE" firstAttribute="top" secondItem="yjo-cb-vJw" secondAttribute="top" id="o0a-1O-Jep"/>
+                            <constraint firstItem="yjo-cb-vJw" firstAttribute="bottom" secondItem="LnS-Nt-JqE" secondAttribute="bottom" id="xX8-2U-Am8"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="messageTextView" destination="LnS-Nt-JqE" id="SsP-71-2Wd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q43-2Y-9xl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="-229"/>
+        </scene>
         <!--App Tab Bar Controller-->
         <scene sceneID="RgP-Af-7L4">
             <objects>
@@ -136,6 +176,9 @@
         <image name="tabbar_profile" width="20" height="20"/>
         <namedColor name="appBackgroundColor">
             <color red="0.95686274509803926" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appHeaderTextColor">
+            <color red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appThemeColor">
             <color red="0.13333333333333333" green="0.3411764705882353" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

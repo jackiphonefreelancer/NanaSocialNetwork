@@ -22,6 +22,7 @@ final class APIManager: NSObject {
         configureFirestoreSettings()
     }
     
+    // Firestore configuration
     func configureFirestoreSettings() {
         // Enable offline data persistence
         let settings = FirestoreSettings()
@@ -32,23 +33,24 @@ final class APIManager: NSObject {
 
 // MARK: - Firebase Firestore - Users
 extension APIManager {
-    func createAppUserIfNeeded(uid: String, displayName: String, completion: @escaping (Bool, Error?) -> Void) {
+    // Completion: If success return no error, else return error
+    func createAppUserIfNeeded(uid: String, displayName: String, completion: @escaping (Error?) -> Void) {
         let docRef = db.collection("Users").document(uid)
         docRef.setData([ "uid": uid,
                          "displayname": displayName,
                          "createdAt": Date()
         ]) { error in
             if let error = error {
-                completion(false, error)
+                completion(error)
             } else {
-                completion(true, nil)
+                completion(nil)
             }
         }
     }
     
+    // Completion: If success return app user, else return error
     func fetchUserInfo(uid: String, completion: @escaping (AppUser?, Error?) -> Void) {
         let docRef = db.collection("Users").document(uid)
-
         docRef.getDocument { (document, error) in
             if let error = error {
                 completion(nil, error)
@@ -71,6 +73,7 @@ extension APIManager {
 
 // MARK: - Firebase Firestore - Posts
 extension APIManager {
+    // Completion: If success return feed item list, else return error
     func fetchFeedList(completion: @escaping ([FeedItem], Error?) -> Void) {
         let postsRef = db.collection("Posts")
         postsRef.order(by: "createdAt", descending: true).getDocuments { (snapshot, error) in
@@ -89,6 +92,27 @@ extension APIManager {
         }
     }
     
+    // Completion: If success return no error, else return error
+    func createPost(message: String, completion: @escaping (Error?) -> Void) {
+        guard let user = AppSession.shared.appUser else {
+            completion(NSError.unknown)
+            return
+        }
+        db.collection("Posts").addDocument(data: [
+            "content": message,
+            "createdAt": Date(),
+            "ownerId": user.uid,
+            "ownerName": user.displayname
+        ]) { error in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    // Completion: If success return no error, else return error
     func deletePost(postId: String, completion: @escaping (Error?) -> Void) {
         db.collection("Posts").document(postId).delete() { error in
             if let error = error {

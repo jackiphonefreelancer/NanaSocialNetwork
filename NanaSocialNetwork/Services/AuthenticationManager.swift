@@ -87,10 +87,3 @@ extension AuthenticationManager {
         }
     }
 }
-
-// MARK: - Authetication User
-extension AuthenticationManager {
-    var authUser: User? {
-        return Auth.auth().currentUser
-    }
-}

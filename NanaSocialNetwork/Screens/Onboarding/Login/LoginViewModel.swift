@@ -55,7 +55,7 @@ extension LoginViewModel {
     }
 }
 
-//MARK: - API
+//MARK: - API + Authentication
 extension LoginViewModel {
     func login() {
         state.onNext(.loading)
@@ -63,7 +63,23 @@ extension LoginViewModel {
             if let error = error {
                 self?.state.onNext(.error(error))
             } else {
+                // Once user logged in, fetch user info
+                self?.fetchUserInfo()
+            }
+        })
+    }
+    
+    func fetchUserInfo() {
+        guard let uid = AppSession.shared.authUser?.uid else {
+            state.onNext(.error(.unknown))
+            return
+        }
+        APIManager.shared.fetchUserInfo(uid: uid, completion: { [weak self] (user, error) in
+            if let user = user {
+                AppSession.shared.storeAppUser(user)
                 self?.state.onNext(.success)
+            } else {
+                self?.state.onNext(.error(.unknown))
             }
         })
     }

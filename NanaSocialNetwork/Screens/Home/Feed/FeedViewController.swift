@@ -61,8 +61,6 @@ class FeedViewController: UIViewController {
         case .success, .reload:
             refreshControl.endRefreshing()
             tableView.reloadData()
-        case .deleted:
-            showToastMessage("You post is deleted successfully")
         default:
             refreshControl.endRefreshing()
         }
@@ -76,6 +74,7 @@ extension FeedViewController {
     }
     
     @IBAction func didPressAdd(_ sender: Any) {
+        showCreatePostScreen()
     }
     
     @IBAction func didSwichSegment(_ sender: UISegmentedControl) {
@@ -98,6 +97,14 @@ extension FeedViewController {
         alert.addAction(okAction)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func showCreatePostScreen() {
+        let vc = CreatePostViewController.storyboardInstance()
+        vc.postCreated = { [weak self] in
+            self?.viewModel.fetchFeedList()
+        }
+        AppRouter.shared.present(with: UINavigationController(rootViewController: vc))
     }
 }
 

@@ -63,7 +63,6 @@ class LoginViewController: UIViewController {
             showLoginError(error)
         case .success:
             AppLoading.shared.hideLoading()
-            showToastMessage("Login success!")
             showHomeScreen()
         default:
             AppLoading.shared.hideLoading()

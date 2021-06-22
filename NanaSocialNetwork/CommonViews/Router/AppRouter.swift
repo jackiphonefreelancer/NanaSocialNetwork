@@ -11,12 +11,16 @@ final class AppRouter {
     static let shared = AppRouter()
     
     func presentAsRoot(with viewController: UIViewController) {
-        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = viewController
+        UIApplication.shared.keyWindow?.rootViewController = viewController
     }
     
     func present(with viewController: UIViewController) {
         viewController.modalPresentationStyle = .fullScreen
         UIApplication.getTopViewController()?.present(viewController, animated: true, completion: nil)
+    }
+    
+    func dismiss() {
+        UIApplication.getTopViewController()?.dismiss(animated: true, completion: nil)
     }
 }
 
