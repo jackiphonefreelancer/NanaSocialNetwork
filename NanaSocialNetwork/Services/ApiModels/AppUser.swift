@@ -10,6 +10,6 @@ import FirebaseFirestoreSwift
 
 struct AppUser: Codable {
     var uid: String
-    var displayname: String
+    var displayName: String
     var createdAt: Date
 }

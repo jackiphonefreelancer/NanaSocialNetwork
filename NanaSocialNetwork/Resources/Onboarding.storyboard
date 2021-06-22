@@ -268,6 +268,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="sgn-d8-VcA" id="uQJ-zw-b3N"/>
                         <outlet property="createButton" destination="7gO-91-kAx" id="zw6-5o-sPD"/>
                         <outlet property="displayNameTextField" destination="06c-Ep-AJR" id="a2S-sx-EYM"/>
                         <outlet property="emailTextField" destination="EFC-wR-40U" id="YaR-P2-1cS"/>

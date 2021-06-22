@@ -17,7 +17,7 @@ class ProfileViewModel: NSObject {
 extension ProfileViewModel {
     var displayName: String {
         let appUser = AppSession.shared.appUser
-        return appUser?.displayname ?? "-"
+        return appUser?.displayName ?? "-"
     }
     
     var email: String {

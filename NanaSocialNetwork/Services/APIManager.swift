@@ -37,7 +37,7 @@ extension APIManager {
     func createAppUserIfNeeded(uid: String, displayName: String, completion: @escaping (Error?) -> Void) {
         let docRef = db.collection("Users").document(uid)
         docRef.setData([ "uid": uid,
-                         "displayname": displayName,
+                         "displayName": displayName,
                          "createdAt": Date()
         ]) { error in
             if let error = error {
@@ -102,7 +102,7 @@ extension APIManager {
             "content": message,
             "createdAt": Date(),
             "ownerId": user.uid,
-            "ownerName": user.displayname
+            "ownerName": user.displayName
         ]) { error in
             if let error = error {
                 completion(error)

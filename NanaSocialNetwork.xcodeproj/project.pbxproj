@@ -12,6 +12,8 @@
 		8D0116872681E17400DC3BE5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116862681E17400DC3BE5 /* Keychain.swift */; };
 		8D01168A2681FBC000DC3BE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */; };
 		8D01168C2681FBCD00DC3BE5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */; };
+		8D01168E2682394700DC3BE5 /* DateFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168D2682394700DC3BE5 /* DateFormatTests.swift */; };
+		8D01169026823EF300DC3BE5 /* UIDevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */; };
 		8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358DE2681C88100E802FB /* CreatePostViewController.swift */; };
 		8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358E02681C89100E802FB /* CreatePostViewModel.swift */; };
 		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
@@ -72,6 +74,8 @@
 		8D0116862681E17400DC3BE5 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8D01168D2682394700DC3BE5 /* DateFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTests.swift; sourceTree = "<group>"; };
+		8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ex.swift"; sourceTree = "<group>"; };
 		8D8358DE2681C88100E802FB /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		8D8358E02681C89100E802FB /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				8DE6AFF6267EC33100F39706 /* UIColor+Style.swift */,
 				8DE6B001267F468300F39706 /* UIViewController+Ex.swift */,
 				8DE6B0352680951500F39706 /* NibInstanceable+Reuseable.swift */,
+				8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				8DE6B009267F78C000F39706 /* LoginTests.swift */,
 				8DE6B022268067C900F39706 /* RegisterTests.swift */,
 				8DC140BE26816C2600366F08 /* ApiTests.swift */,
+				8D01168D2682394700DC3BE5 /* DateFormatTests.swift */,
 				8DE6B00B267F78C000F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetworkTests;
@@ -576,6 +582,7 @@
 			files = (
 				8DE6B03326808D9400F39706 /* FeedItemCell.swift in Sources */,
 				8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */,
+				8D01169026823EF300DC3BE5 /* UIDevice+Ex.swift in Sources */,
 				8DE6B02B26806F9F00F39706 /* AppTabBarController.swift in Sources */,
 				8DE6B0362680951500F39706 /* NibInstanceable+Reuseable.swift in Sources */,
 				8DE6B002267F468300F39706 /* UIViewController+Ex.swift in Sources */,
@@ -614,6 +621,7 @@
 			files = (
 				8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */,
 				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
+				8D01168E2682394700DC3BE5 /* DateFormatTests.swift in Sources */,
 				8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

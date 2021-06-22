@@ -15,6 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: AppTextField!
     @IBOutlet weak var displayNameTextField: AppTextField!
     @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet var inputTextFields: [UITextField]!
     
     // Variables
@@ -40,6 +41,9 @@ class RegisterViewController: UIViewController {
         inputTextFields.forEach { textField in
             textField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
         }
+        
+        // Hide close button if device has notch
+        closeButton.isHidden = UIDevice.current.hasNotch
     }
     
     // BindView Model

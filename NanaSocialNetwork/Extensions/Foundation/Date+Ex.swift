@@ -36,7 +36,7 @@ extension Date {
         } else {
             let timeString = string(format: "HH:mm")
             let dateString = string(format: "MMMM dd yyyy")
-            return String(format: "%@ %@", dateString, timeString)
+            return String(format: "%@, %@", dateString, timeString)
         }
     }
 }
@@ -45,4 +45,10 @@ extension Int {
     func isPlural() -> Bool {
         return self > 1
     }
+}
+
+extension TimeInterval {
+    static let minute = 60.0
+    static let hour = 60.0*60
+    static let day = 60.0*60*24
 }
