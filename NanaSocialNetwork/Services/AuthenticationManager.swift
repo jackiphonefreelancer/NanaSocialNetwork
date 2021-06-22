@@ -81,6 +81,7 @@ extension AuthenticationManager {
     func logout(completion: @escaping (Bool) -> Void) {
         do {
             try Auth.auth().signOut()
+            AppSession.shared.storeAppUser(nil)
             completion(true)
         } catch  {
             completion(false)

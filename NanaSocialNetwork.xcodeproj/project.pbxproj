@@ -10,6 +10,8 @@
 		36B2FACF7B7B1C46DA093B41 /* Pods_NanaSocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41052E09C98BFFEB225E7F02 /* Pods_NanaSocialNetwork.framework */; };
 		8D0116852681D2A900DC3BE5 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116842681D2A900DC3BE5 /* AppSession.swift */; };
 		8D0116872681E17400DC3BE5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116862681E17400DC3BE5 /* Keychain.swift */; };
+		8D01168A2681FBC000DC3BE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */; };
+		8D01168C2681FBCD00DC3BE5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */; };
 		8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358DE2681C88100E802FB /* CreatePostViewController.swift */; };
 		8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358E02681C89100E802FB /* CreatePostViewModel.swift */; };
 		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
@@ -68,6 +70,8 @@
 		888879635B6A06E7BFAF9FA4 /* Pods-NanaSocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NanaSocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-NanaSocialNetwork/Pods-NanaSocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0116842681D2A900DC3BE5 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		8D0116862681E17400DC3BE5 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		8D8358DE2681C88100E802FB /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		8D8358E02681C89100E802FB /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 		8DE6B02526806BB500F39706 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */,
+				8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -580,6 +586,8 @@
 				8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */,
 				8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */,
 				8DE6AFF9267F39B300F39706 /* APIManager.swift in Sources */,
+				8D01168C2681FBCD00DC3BE5 /* ProfileViewModel.swift in Sources */,
+				8D01168A2681FBC000DC3BE5 /* ProfileViewController.swift in Sources */,
 				8DE6AFF0267EC14E00F39706 /* LoginViewModel.swift in Sources */,
 				8DC140C12681769D00366F08 /* AuthenticationManager.swift in Sources */,
 				8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */,
