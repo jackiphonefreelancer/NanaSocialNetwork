@@ -1,14 +1,14 @@
 //
-//  APIManager+FirebaseAuth.swift
+//  AuthenticationManager.swift
 //  NanaSocialNetwork
 //
-//  Created by Teerapat on 6/21/21.
+//  Created by Teerapat on 6/22/21.
 //
 
 import Foundation
 import FirebaseAuth
 
-// MARK: - Firebase Authentication
+// MARK: - Authentication Manager
 enum LoginError {
     case wrongPassword // Indicates the user attempted sign in with an incorrect password
     case invalidEmail // Indicates the email address is malformed
@@ -22,7 +22,13 @@ enum CreateUserError {
     case unknown // Other reasons
 }
 
-extension APIManager {
+final class AuthenticationManager: NSObject {
+    // Global instance
+    static let shared = AuthenticationManager()
+}
+
+// MARK: - Firebase Authentication
+extension AuthenticationManager {
     /**
      completion block: return 2 parameters
      param 1: Success - (true: sucess, false fail)
@@ -67,5 +73,24 @@ extension APIManager {
                 completion(nil, .unknown)
             }
         }
+    }
+    
+    /**
+     completion block: return  success or not
+     **/
+    func logout(completion: @escaping (Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+        } catch  {
+            completion(false)
+        }
+    }
+}
+
+// MARK: - Authetication User
+extension AuthenticationManager {
+    var authUser: User? {
+        return Auth.auth().currentUser
     }
 }

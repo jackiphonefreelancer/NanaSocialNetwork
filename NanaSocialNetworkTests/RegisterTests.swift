@@ -29,7 +29,7 @@ extension RegisterTests {
         let expectation = self.expectation(description: "RegisterTests")
         var error: CreateUserError?
         
-        APIManager.shared.createUser(withEmail: "test1@nana.com", password: "123456", completion: { (result, err) in
+        AuthenticationManager.shared.createUser(withEmail: "test1@nana.com", password: "123456", completion: { (result, err) in
             error = err
             expectation.fulfill()
         })
@@ -46,7 +46,7 @@ extension RegisterTests {
         let expectation = self.expectation(description: "RegisterTests")
         var error: CreateUserError?
         
-        APIManager.shared.createUser(withEmail: "test12345@nana.com", password: "1111", completion: { (result, err) in
+        AuthenticationManager.shared.createUser(withEmail: "test12345@nana.com", password: "1111", completion: { (result, err) in
             error = err
             expectation.fulfill()
         })

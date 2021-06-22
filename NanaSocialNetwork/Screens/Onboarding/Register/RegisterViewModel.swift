@@ -73,7 +73,7 @@ extension RegisterViewModel {
 extension RegisterViewModel {
     func createUser() {
         state.onNext(.loading)
-        APIManager.shared.createUser(withEmail: email!, password: password!, completion: { [weak self] (uid, error) in
+        AuthenticationManager.shared.createUser(withEmail: email!, password: password!, completion: { [weak self] (uid, error) in
             if let error = error {
                 self?.state.onNext(.error(error))
             } else if let uid = uid {
