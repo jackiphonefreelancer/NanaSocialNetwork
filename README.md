@@ -47,10 +47,10 @@ NanaSocialNetwork is iOS application for a micro social media service
 ### Limit of usage
 In this prohect uses free license account of Firebase, so there are some limitation of usages
 1. Cloud Firestore:
-  1.1 Write/Delete: 20K per day
-  1.2 Read: 50K per day
+  - Write/Delete: 20K per day
+  - Read: 50K per day
 2. Cloud Storage:
-  2.1 Bytes stored: 5GB
-  2.2 Bandwidth: 1GB per day
+  - Bytes stored: 5GB
+  - Bandwidth: 1GB per day
 3. Authetication: No limit for email/password authetication
 
