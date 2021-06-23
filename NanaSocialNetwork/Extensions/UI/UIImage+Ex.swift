@@ -35,20 +35,15 @@ extension UIImageView {
             self.image = imageCache.object(forKey: url.absoluteString as AnyObject)
         }
         else {
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard
-                    let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                    let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                    let data = data, error == nil,
-                    let image = UIImage(data: data)
-                    else { return }
-                DispatchQueue.main.async() {
-                    imageCache.setObject(image, forKey: url.absoluteString as AnyObject)
-                    self.image = image
-                }
-                }.resume()
+            guard let data = NSData(contentsOf: url),
+                  let image = UIImage(data: data as Data) else {
+                return
+            }
+            DispatchQueue.main.async() {
+                imageCache.setObject(image, forKey: url.absoluteString as AnyObject)
+                self.image = image
+            }
         }
-        
     }
     func downloaded(from link: String?, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
         guard let urlString = link else { return }

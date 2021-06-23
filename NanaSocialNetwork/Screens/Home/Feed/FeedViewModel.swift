@@ -56,6 +56,7 @@ extension FeedViewModel {
     func feedItem(at index: Int) -> FeedItemCellViewModel {
         let feed = filteredFeeds[index]
         return FeedItemCellViewModel(displayName: feed.ownerName,
+                                     image: feed.image,
                                      text: feed.content,
                                      date: feed.createdAt.timeAgoDisplay(),
                                      canDelete: feed.ownerId == Auth.auth().currentUser?.uid)

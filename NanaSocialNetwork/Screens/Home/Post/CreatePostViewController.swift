@@ -192,7 +192,7 @@ extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigatio
             }
             cropper.finished = { [unowned self] vc, croppedImage in
                 vc.dismiss(animated: true, completion: nil)
-                self.updateImage(image: originalImage)
+                self.updateImage(image: croppedImage)
             }
             picker.pushViewController(cropper, animated: true)
         }
