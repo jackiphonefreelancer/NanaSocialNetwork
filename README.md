@@ -14,8 +14,8 @@ NanaSocialNetwork is iOS application for a micro social media service
 4. Open `NanaSocialNetwork.xcworkspace` and run the project on simulator or real device
 
 ### Third party frameworks
-- Use `cocoapods` as a dependencies manager to import integrate these frameworks.
-- In this project contains 3 third party libraries
+- Use `cocoapods` as a dependencies manager to import frameworks.
+- In this project contains 3 third party frameworks
   - Firebase: Beckend as a services
     - Firebase Authentication: to support email/password authentication
     - Firestore Database: to store realtime posts and users
