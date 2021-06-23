@@ -44,3 +44,13 @@ NanaSocialNetwork is iOS application for a micro social media service
 5. Tap '+' icon to create a new post.
 6. After you created your post, you will see it in timelines or your posts. Then you can delete it anytime.
 
+### Limit of usage
+In this prohect uses free license account of Firebase, so there are some limitation of usages
+1. Cloud Firestore:
+  1.1 Write/Delete: 20K per day
+  1.2 Read: 50K per day
+2. Cloud Storage:
+  2.1 Bytes stored: 5GB
+  2.2 Bandwidth: 1GB per day
+3. Authetication: No limit for email/password authetication
+
