@@ -42,17 +42,37 @@ extension CreatePostViewModel {
         self.image = image
         deleteButtonState.onNext(image != nil)
     }
+    
+    func createPost() {
+        if let image = image {
+            // Upload file if it not nil
+            uploadImageIfNeeded(image: image)
+        } else {
+            createPost(with: nil)
+        }
+    }
 }
 
 //MARK: - API
 extension CreatePostViewModel {
-    func createPost() {
+    func createPost(with imageUrl: URL?) {
         state.onNext(.loading)
-        APIManager.shared.createPost(content: content!, image: nil, completion: { [weak self] error in
+        APIManager.shared.createPost(content: content!, imageUrl: imageUrl, completion: { [weak self] error in
             if let _ = error {
                 self?.state.onNext(.error)
             } else {
                 self?.state.onNext(.success)
+            }
+        })
+    }
+    
+    func uploadImageIfNeeded(image: UIImage) {
+        state.onNext(.loading)
+        APIManager.shared.uploadImage(image: image, completion: { [weak self] (url, error) in
+            if let url = url {
+                self?.createPost(with: url)
+            } else {
+                self?.state.onNext(.error)
             }
         })
     }

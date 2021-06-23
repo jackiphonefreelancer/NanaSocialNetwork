@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseStorage
 
 final class APIManager: NSObject {
     // Global instance
@@ -14,6 +15,9 @@ final class APIManager: NSObject {
     
     // Firestore instance
     let db = Firestore.firestore()
+    
+    // Firebase storage instance
+    let storage = Storage.storage()
     
     override init() {
         super.init()

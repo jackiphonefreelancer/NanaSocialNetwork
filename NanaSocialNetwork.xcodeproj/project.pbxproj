@@ -18,6 +18,8 @@
 		8D0116952682C65400DC3BE5 /* LogoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116942682C65400DC3BE5 /* LogoutTests.swift */; };
 		8D0116982682DC5000DC3BE5 /* PhotoCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116972682DC5000DC3BE5 /* PhotoCropperViewController.swift */; };
 		8D01169A2682DC8100DC3BE5 /* PhotoCropperOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116992682DC8100DC3BE5 /* PhotoCropperOverlayView.swift */; };
+		8D01169C2682E5CF00DC3BE5 /* APIManager+FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01169B2682E5CF00DC3BE5 /* APIManager+FirebaseStorage.swift */; };
+		8D01169E2682E75D00DC3BE5 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01169D2682E75D00DC3BE5 /* UIImage+Ex.swift */; };
 		8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358DE2681C88100E802FB /* CreatePostViewController.swift */; };
 		8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358E02681C89100E802FB /* CreatePostViewModel.swift */; };
 		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
@@ -84,6 +86,8 @@
 		8D0116942682C65400DC3BE5 /* LogoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutTests.swift; sourceTree = "<group>"; };
 		8D0116972682DC5000DC3BE5 /* PhotoCropperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropperViewController.swift; sourceTree = "<group>"; };
 		8D0116992682DC8100DC3BE5 /* PhotoCropperOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropperOverlayView.swift; sourceTree = "<group>"; };
+		8D01169B2682E5CF00DC3BE5 /* APIManager+FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+FirebaseStorage.swift"; sourceTree = "<group>"; };
+		8D01169D2682E75D00DC3BE5 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		8D8358DE2681C88100E802FB /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		8D8358E02681C89100E802FB /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 				8DE6AFF8267F39B300F39706 /* APIManager.swift */,
 				8DC140C02681769D00366F08 /* APIManager+FirebaseAuth.swift */,
 				8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */,
+				8D01169B2682E5CF00DC3BE5 /* APIManager+FirebaseStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				8DE6B001267F468300F39706 /* UIViewController+Ex.swift */,
 				8DE6B0352680951500F39706 /* NibInstanceable+Reuseable.swift */,
 				8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */,
+				8D01169D2682E75D00DC3BE5 /* UIImage+Ex.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 			files = (
 				8DE6B03326808D9400F39706 /* FeedItemCell.swift in Sources */,
 				8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */,
+				8D01169C2682E5CF00DC3BE5 /* APIManager+FirebaseStorage.swift in Sources */,
 				8D01169026823EF300DC3BE5 /* UIDevice+Ex.swift in Sources */,
 				8DE6B02B26806F9F00F39706 /* AppTabBarController.swift in Sources */,
 				8DE6B0362680951500F39706 /* NibInstanceable+Reuseable.swift in Sources */,
@@ -634,6 +641,7 @@
 				8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */,
 				8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */,
 				8DE6B0172680233300F39706 /* AppUser.swift in Sources */,
+				8D01169E2682E75D00DC3BE5 /* UIImage+Ex.swift in Sources */,
 				8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */,
 				8D0116982682DC5000DC3BE5 /* PhotoCropperViewController.swift in Sources */,
 				8DE6AFF3267EC28900F39706 /* AppTextField.swift in Sources */,
