@@ -12,12 +12,13 @@
 		8D0116872681E17400DC3BE5 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116862681E17400DC3BE5 /* Keychain.swift */; };
 		8D01168A2681FBC000DC3BE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */; };
 		8D01168C2681FBCD00DC3BE5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */; };
-		8D01168E2682394700DC3BE5 /* DateFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168D2682394700DC3BE5 /* DateFormatTests.swift */; };
+		8D01168E2682394700DC3BE5 /* TimeAgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */; };
 		8D01169026823EF300DC3BE5 /* UIDevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */; };
+		8D0116922682BD3700DC3BE5 /* APIManager+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */; };
 		8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358DE2681C88100E802FB /* CreatePostViewController.swift */; };
 		8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358E02681C89100E802FB /* CreatePostViewModel.swift */; };
 		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
-		8DC140C12681769D00366F08 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140C02681769D00366F08 /* AuthenticationManager.swift */; };
+		8DC140C12681769D00366F08 /* APIManager+FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140C02681769D00366F08 /* APIManager+FirebaseAuth.swift */; };
 		8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC4267E186300F39706 /* AppDelegate.swift */; };
 		8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC6267E186300F39706 /* SceneDelegate.swift */; };
 		8DE6AFC9267E186300F39706 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AFC8267E186300F39706 /* LoginViewController.swift */; };
@@ -74,12 +75,13 @@
 		8D0116862681E17400DC3BE5 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		8D0116892681FBC000DC3BE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D01168B2681FBCD00DC3BE5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		8D01168D2682394700DC3BE5 /* DateFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTests.swift; sourceTree = "<group>"; };
+		8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgoTests.swift; sourceTree = "<group>"; };
 		8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ex.swift"; sourceTree = "<group>"; };
+		8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Firestore.swift"; sourceTree = "<group>"; };
 		8D8358DE2681C88100E802FB /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		8D8358E02681C89100E802FB /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
-		8DC140C02681769D00366F08 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		8DC140C02681769D00366F08 /* APIManager+FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+FirebaseAuth.swift"; sourceTree = "<group>"; };
 		8DE6AFC1267E186300F39706 /* NanaSocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanaSocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6AFC4267E186300F39706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AFC6267E186300F39706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8D0116932682BDF100DC3BE5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				8D0116842681D2A900DC3BE5 /* AppSession.swift */,
+				8D0116862681E17400DC3BE5 /* Keychain.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		8D8358DD2681C84E00E802FB /* Post */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,11 +236,11 @@
 		8DE6AFDA267E1F8800F39706 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8D0116932682BDF100DC3BE5 /* Session */,
 				8DE6B0152680231C00F39706 /* ApiModels */,
-				8DC140C02681769D00366F08 /* AuthenticationManager.swift */,
 				8DE6AFF8267F39B300F39706 /* APIManager.swift */,
-				8D0116842681D2A900DC3BE5 /* AppSession.swift */,
-				8D0116862681E17400DC3BE5 /* Keychain.swift */,
+				8DC140C02681769D00366F08 /* APIManager+FirebaseAuth.swift */,
+				8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,7 +342,7 @@
 				8DE6B009267F78C000F39706 /* LoginTests.swift */,
 				8DE6B022268067C900F39706 /* RegisterTests.swift */,
 				8DC140BE26816C2600366F08 /* ApiTests.swift */,
-				8D01168D2682394700DC3BE5 /* DateFormatTests.swift */,
+				8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */,
 				8DE6B00B267F78C000F39706 /* Info.plist */,
 			);
 			path = NanaSocialNetworkTests;
@@ -592,11 +603,12 @@
 				8DE6AFFC267F415E00F39706 /* String+Ex.swift in Sources */,
 				8DE6AFC5267E186300F39706 /* AppDelegate.swift in Sources */,
 				8DE6AFC7267E186300F39706 /* SceneDelegate.swift in Sources */,
+				8D0116922682BD3700DC3BE5 /* APIManager+Firestore.swift in Sources */,
 				8DE6AFF9267F39B300F39706 /* APIManager.swift in Sources */,
 				8D01168C2681FBCD00DC3BE5 /* ProfileViewModel.swift in Sources */,
 				8D01168A2681FBC000DC3BE5 /* ProfileViewController.swift in Sources */,
 				8DE6AFF0267EC14E00F39706 /* LoginViewModel.swift in Sources */,
-				8DC140C12681769D00366F08 /* AuthenticationManager.swift in Sources */,
+				8DC140C12681769D00366F08 /* APIManager+FirebaseAuth.swift in Sources */,
 				8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */,
 				8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */,
 				8DE6B02E268076B600F39706 /* FeedItem.swift in Sources */,
@@ -621,7 +633,7 @@
 			files = (
 				8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */,
 				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
-				8D01168E2682394700DC3BE5 /* DateFormatTests.swift in Sources */,
+				8D01168E2682394700DC3BE5 /* TimeAgoTests.swift in Sources */,
 				8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

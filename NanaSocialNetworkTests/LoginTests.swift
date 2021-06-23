@@ -47,7 +47,7 @@ extension LoginTests {
         let expectation = self.expectation(description: "LoginTests")
         var result = false
 
-        AuthenticationManager.shared.login(withEmail: "test1@nana.com", password: "123456", completion: { (success, error) in
+        APIManager.shared.login(withEmail: "test1@nana.com", password: "123456", completion: { (success, error) in
             result = success
             expectation.fulfill()
         })
@@ -60,7 +60,7 @@ extension LoginTests {
         let expectation = self.expectation(description: "LoginTests")
         var result = false
 
-        AuthenticationManager.shared.login(withEmail: "test1@nana.com", password: "12345", completion: { (success, error) in
+        APIManager.shared.login(withEmail: "test1@nana.com", password: "12345", completion: { (success, error) in
             result = success
             expectation.fulfill()
         })

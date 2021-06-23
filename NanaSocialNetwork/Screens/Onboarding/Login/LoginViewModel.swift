@@ -59,7 +59,7 @@ extension LoginViewModel {
 extension LoginViewModel {
     func login() {
         state.onNext(.loading)
-        AuthenticationManager.shared.login(withEmail: email!, password: password!, completion: { [weak self] (success, error) in
+        APIManager.shared.login(withEmail: email!, password: password!, completion: { [weak self] (success, error) in
             if let error = error {
                 self?.state.onNext(.error(error))
             } else {

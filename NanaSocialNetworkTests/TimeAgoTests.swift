@@ -8,7 +8,7 @@
 import XCTest
 @testable import NanaSocialNetwork
 
-class DateFormatTests: XCTestCase {
+class TimeAgoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,10 +24,20 @@ class DateFormatTests: XCTestCase {
 }
 
 //MARK: - Test: Time ago
-extension DateFormatTests {
+extension TimeAgoTests {
+    func testJustNow() throws {
+        let date = Date(timeIntervalSinceNow: 0)
+        XCTAssertEqual(date.timeAgoDisplay(), "just now")
+    }
+    
     func testSecondsAgo() throws {
         let date = Date(timeIntervalSinceNow: -30)
         XCTAssertEqual(date.timeAgoDisplay(), "30 seconds ago")
+    }
+    
+    func testOneMinuteAgo() throws {
+        let date = Date(timeIntervalSinceNow: -1 * TimeInterval.minute)
+        XCTAssertEqual(date.timeAgoDisplay(), "1 minute ago")
     }
     
     func testMinutesAgo() throws {
@@ -35,9 +45,19 @@ extension DateFormatTests {
         XCTAssertEqual(date.timeAgoDisplay(), "28 minutes ago")
     }
     
+    func testOneHourAgo() throws {
+        let date = Date(timeIntervalSinceNow: -1 * TimeInterval.hour)
+        XCTAssertEqual(date.timeAgoDisplay(), "1 hour ago")
+    }
+    
     func testHoursAgo() throws {
         let date = Date(timeIntervalSinceNow: -12 * TimeInterval.hour)
         XCTAssertEqual(date.timeAgoDisplay(), "12 hours ago")
+    }
+    
+    func testOneDayAgo() throws {
+        let date = Date(timeIntervalSinceNow: -1 * TimeInterval.day)
+        XCTAssertEqual(date.timeAgoDisplay(), "1 day ago")
     }
     
     func testDaysAgo() throws {

@@ -36,7 +36,7 @@ extension ProfileViewModel {
 //MARK: - API
 extension ProfileViewModel {
     func logout() {
-        AuthenticationManager.shared.logout(completion: { [weak self] success in
+        APIManager.shared.logout(completion: { [weak self] success in
             self?.logoutState.onNext(success)
         })
     }

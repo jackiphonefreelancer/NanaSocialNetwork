@@ -23,7 +23,7 @@ extension Date {
         
         if minuteAgo < self {
             let diff = Calendar.current.dateComponents([.second], from: self, to: Date()).second ?? 0
-            return diff.isPlural() ? "\(diff) seconds ago" : "\(diff) second ago"
+            return diff.isPlural() ? "\(diff) seconds ago" : "just now"
         } else if hourAgo < self {
             let diff = Calendar.current.dateComponents([.minute], from: self, to: Date()).minute ?? 0
             return diff.isPlural() ? "\(diff) minutes ago" : "\(diff) minute ago"
