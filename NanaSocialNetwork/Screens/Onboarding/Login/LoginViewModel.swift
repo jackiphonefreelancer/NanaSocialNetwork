@@ -22,6 +22,12 @@ class LoginViewModel: NSObject {
     let buttonState = BehaviorSubject(value: false) // Default - false
     private var email: String?
     private var password: String?
+    
+    init(email: String? = nil, password: String? = nil) {
+        super.init()
+        self.email = email
+        self.password = password
+    }
 }
 
 //MARK: - Business Logic

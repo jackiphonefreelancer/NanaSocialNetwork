@@ -23,31 +23,3 @@ extension UIImage {
         return jpegData(compressionQuality: jpegQuality.rawValue)
     }
 }
-
-// MARK: - Caching
-let imageCache = NSCache<AnyObject, UIImage>()
-
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        //contentMode = mode
-        // check if you can find url in cache
-        if (imageCache.object(forKey: url.absoluteString as String as AnyObject) != nil) {
-            self.image = imageCache.object(forKey: url.absoluteString as AnyObject)
-        }
-        else {
-            guard let data = NSData(contentsOf: url),
-                  let image = UIImage(data: data as Data) else {
-                return
-            }
-            DispatchQueue.main.async() {
-                imageCache.setObject(image, forKey: url.absoluteString as AnyObject)
-                self.image = image
-            }
-        }
-    }
-    func downloaded(from link: String?, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
-        guard let urlString = link else { return }
-        guard let url = URL(string: urlString) else { return }
-        downloaded(from: url, contentMode: mode)
-    }
-}

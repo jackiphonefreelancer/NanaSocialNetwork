@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 struct FeedItemCellViewModel {
     let displayName: String
@@ -34,7 +35,7 @@ class FeedItemCell: UITableViewCell {
         deleteButton.isHidden = !item.canDelete
         if let image = item.image, let imageURL = URL(string: image) {
             contentImageView.isHidden = false
-            contentImageView.downloaded(from: imageURL)
+            contentImageView.kf.setImage(with: imageURL)
         } else {
             contentImageView.isHidden = true
         }

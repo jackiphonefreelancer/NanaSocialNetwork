@@ -1,5 +1,5 @@
 //
-//  DateFormatTests.swift
+//  ApiTests.swift
 //  NanaSocialNetworkTests
 //
 //  Created by Teerapat on 6/22/21.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import NanaSocialNetwork
 
-class TimeAgoTests: XCTestCase {
+class FeedsTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,8 +23,24 @@ class TimeAgoTests: XCTestCase {
     }
 }
 
-//MARK: - Test: Time ago
-extension TimeAgoTests {
+//MARK: - Test: Fetch Feeds
+extension FeedsTests {
+    func testFetchFeeds() throws {
+        let expectation = self.expectation(description: "FeedsTests")
+        var result: [FeedItem]?
+        
+        APIManager.shared.fetchFeedList(completion: { (items, err) in
+            result = items
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10) // Timeout for 10 sec.
+        XCTAssertNotNil(result)
+    }
+}
+
+//MARK: - Test: Time ago display
+extension FeedsTests {
     func testJustNow() throws {
         let date = Date(timeIntervalSinceNow: 0)
         XCTAssertEqual(date.timeAgoDisplay(), "just now")

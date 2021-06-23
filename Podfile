@@ -13,11 +13,13 @@ target 'NanaSocialNetwork' do
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
   pod 'RxSwift'
+  pod 'Kingfisher'
   
   target 'NanaSocialNetworkTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Firebase'
+    pod 'RxSwift'
 
   end
 

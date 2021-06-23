@@ -24,6 +24,13 @@ class RegisterViewModel: NSObject {
     private var email: String?
     private var password: String?
     private var displayname: String?
+    
+    init(email: String? = nil, password: String? = nil, displayname: String? = nil) {
+        super.init()
+        self.email = email
+        self.password = password
+        self.displayname = displayname
+    }
 }
 
 //MARK: - Business Logic

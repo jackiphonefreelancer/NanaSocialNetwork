@@ -24,6 +24,12 @@ class CreatePostViewModel: NSObject {
     
     private var content: String?
     private var image: UIImage?
+    
+    init(content: String? = nil, image: UIImage? = nil) {
+        super.init()
+        self.content = content
+        self.image = image
+    }
 }
 
 //MARK: - Business Logic
