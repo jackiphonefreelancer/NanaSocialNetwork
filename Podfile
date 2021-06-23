@@ -10,8 +10,8 @@ target 'NanaSocialNetwork' do
   # Pods for NanaSocialNetwork
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-#  pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Storage'
   pod 'RxSwift'
   
   target 'NanaSocialNetworkTests' do

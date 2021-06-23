@@ -15,6 +15,9 @@
 		8D01168E2682394700DC3BE5 /* TimeAgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */; };
 		8D01169026823EF300DC3BE5 /* UIDevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */; };
 		8D0116922682BD3700DC3BE5 /* APIManager+Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */; };
+		8D0116952682C65400DC3BE5 /* LogoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116942682C65400DC3BE5 /* LogoutTests.swift */; };
+		8D0116982682DC5000DC3BE5 /* PhotoCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116972682DC5000DC3BE5 /* PhotoCropperViewController.swift */; };
+		8D01169A2682DC8100DC3BE5 /* PhotoCropperOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0116992682DC8100DC3BE5 /* PhotoCropperOverlayView.swift */; };
 		8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358DE2681C88100E802FB /* CreatePostViewController.swift */; };
 		8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8358E02681C89100E802FB /* CreatePostViewModel.swift */; };
 		8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC140BE26816C2600366F08 /* ApiTests.swift */; };
@@ -78,6 +81,9 @@
 		8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgoTests.swift; sourceTree = "<group>"; };
 		8D01168F26823EF300DC3BE5 /* UIDevice+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ex.swift"; sourceTree = "<group>"; };
 		8D0116912682BD3700DC3BE5 /* APIManager+Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Firestore.swift"; sourceTree = "<group>"; };
+		8D0116942682C65400DC3BE5 /* LogoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutTests.swift; sourceTree = "<group>"; };
+		8D0116972682DC5000DC3BE5 /* PhotoCropperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropperViewController.swift; sourceTree = "<group>"; };
+		8D0116992682DC8100DC3BE5 /* PhotoCropperOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCropperOverlayView.swift; sourceTree = "<group>"; };
 		8D8358DE2681C88100E802FB /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		8D8358E02681C89100E802FB /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 		8DC140BE26816C2600366F08 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
@@ -169,6 +175,15 @@
 				8D0116862681E17400DC3BE5 /* Keychain.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		8D0116962682DC3E00DC3BE5 /* PhotoCropper */ = {
+			isa = PBXGroup;
+			children = (
+				8D0116972682DC5000DC3BE5 /* PhotoCropperViewController.swift */,
+				8D0116992682DC8100DC3BE5 /* PhotoCropperOverlayView.swift */,
+			);
+			path = PhotoCropper;
 			sourceTree = "<group>";
 		};
 		8D8358DD2681C84E00E802FB /* Post */ = {
@@ -318,6 +333,7 @@
 		8DE6AFF1267EC22D00F39706 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				8D0116962682DC3E00DC3BE5 /* PhotoCropper */,
 				8DE6B02C26806FF000F39706 /* Router */,
 				8DE6AFF2267EC28900F39706 /* AppTextField.swift */,
 				8DE6AFFD267F41F900F39706 /* AppLoading.swift */,
@@ -340,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE6B009267F78C000F39706 /* LoginTests.swift */,
+				8D0116942682C65400DC3BE5 /* LogoutTests.swift */,
 				8DE6B022268067C900F39706 /* RegisterTests.swift */,
 				8DC140BE26816C2600366F08 /* ApiTests.swift */,
 				8D01168D2682394700DC3BE5 /* TimeAgoTests.swift */,
@@ -611,12 +628,14 @@
 				8DC140C12681769D00366F08 /* APIManager+FirebaseAuth.swift in Sources */,
 				8DE6B01E2680437B00F39706 /* RegisterViewModel.swift in Sources */,
 				8D8358DF2681C88100E802FB /* CreatePostViewController.swift in Sources */,
+				8D01169A2682DC8100DC3BE5 /* PhotoCropperOverlayView.swift in Sources */,
 				8DE6B02E268076B600F39706 /* FeedItem.swift in Sources */,
 				8D0116852681D2A900DC3BE5 /* AppSession.swift in Sources */,
 				8DE6AFED267EBC0900F39706 /* IBInspectables.swift in Sources */,
 				8D8358E12681C89100E802FB /* CreatePostViewModel.swift in Sources */,
 				8DE6B0172680233300F39706 /* AppUser.swift in Sources */,
 				8DE6AFFE267F41F900F39706 /* AppLoading.swift in Sources */,
+				8D0116982682DC5000DC3BE5 /* PhotoCropperViewController.swift in Sources */,
 				8DE6AFF3267EC28900F39706 /* AppTextField.swift in Sources */,
 				8DE6B02926806C3000F39706 /* FeedViewModel.swift in Sources */,
 				8DE6B0192680292400F39706 /* Error+Ex.swift in Sources */,
@@ -633,6 +652,7 @@
 			files = (
 				8DE6B023268067C900F39706 /* RegisterTests.swift in Sources */,
 				8DE6B00A267F78C000F39706 /* LoginTests.swift in Sources */,
+				8D0116952682C65400DC3BE5 /* LogoutTests.swift in Sources */,
 				8D01168E2682394700DC3BE5 /* TimeAgoTests.swift in Sources */,
 				8DC140BF26816C2600366F08 /* ApiTests.swift in Sources */,
 			);

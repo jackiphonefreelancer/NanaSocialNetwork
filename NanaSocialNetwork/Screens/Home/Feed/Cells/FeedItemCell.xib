@@ -61,6 +61,7 @@
                                     <constraint firstAttribute="width" constant="20" id="SEJ-d0-iw2"/>
                                     <constraint firstAttribute="height" constant="20" id="fXZ-aL-Ru3"/>
                                 </constraints>
+                                <color key="tintColor" name="appHeaderTextColor"/>
                                 <state key="normal" title="Button" image="bin"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

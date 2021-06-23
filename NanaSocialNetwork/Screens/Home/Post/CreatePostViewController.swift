@@ -11,7 +11,9 @@ import RxSwift
 class CreatePostViewController: UIViewController {
 
     // IBOutlet
-    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentImageViewView: UIImageView!
+    @IBOutlet weak var deleteButton: UIButton!
     lazy var postBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(didPressPost))
     }()
@@ -40,7 +42,7 @@ class CreatePostViewController: UIViewController {
         navigationItem.leftBarButtonItem = cancelBarButtonItem
         
         // Show keyboard
-        messageTextView.becomeFirstResponder()
+        contentTextView.becomeFirstResponder()
     }
     
     // BindView Model
@@ -51,9 +53,15 @@ class CreatePostViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
-        viewModel.buttonState
-            .subscribe { [weak self] isValid in
-                self?.updateButtonState(isValid)
+        viewModel.postButtonState
+            .subscribe { [weak self] isEnabled in
+                self?.updatePostButtonState(isEnabled)
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.deleteButtonState
+            .subscribe { [weak self] isEnabled in
+                self?.updateDeleteButtonState(isEnabled)
             }
             .disposed(by: disposeBag)
     }
@@ -75,8 +83,18 @@ class CreatePostViewController: UIViewController {
         }
     }
     
-    func updateButtonState(_ isValid: Bool) {
+    func updatePostButtonState(_ isValid: Bool) {
         postBarButtonItem.isEnabled = isValid
+    }
+    
+    func updateDeleteButtonState(_ isValid: Bool) {
+        deleteButton.isEnabled = isValid
+    }
+    
+    // Update image
+    func updateImage(image: UIImage?) {
+        contentImageViewView.image = (image == nil) ? UIImage(named: "image_placeholder") : image
+        viewModel.updateContentImage(image)
     }
 }
 
@@ -91,16 +109,65 @@ extension CreatePostViewController {
         AppRouter.shared.dismiss()
     }
     
-    @objc func textChanged(_ textView: UITextView) {
-        let text = textView.text
-        viewModel.updateMessage(text)
+    @IBAction func didPressCamera(_ sender: Any) {
+        showPhotoSelectionActionSheet()
+    }
+    
+    @IBAction func didPressDelete(_ sender: Any) {
+        updateImage(image: nil)
     }
 }
 
-//MARK: - Dialog
+//MARK: - Dialog - Router
 extension CreatePostViewController {
     func showLoginError() {
         showErrorDialog(title: "Error", message: "Please try again later.")
+    }
+    
+    func showPhotoSelectionActionSheet() {
+        let title = "Add photo"
+        let actionSheetController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
+        let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take photo", style: .default) { _ in
+            self.takePhoto()
+        }
+        let openGalleryAction: UIAlertAction = UIAlertAction(title: "Open gallery", style: .default) { [unowned self] _ in
+            self.openGallery()
+        }
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in }
+        actionSheetController.addAction(takePhotoAction)
+        actionSheetController.addAction(openGalleryAction)
+        actionSheetController.addAction(cancelAction)
+        if #available(iOS 13.0, *) {
+            actionSheetController.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+        present(actionSheetController, animated: true, completion: nil)
+    }
+    
+    func takePhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let picker = UIImagePickerController()
+            picker.sourceType = .camera
+            picker.modalPresentationStyle = .fullScreen
+            picker.delegate = self
+            picker.mediaTypes = ["public.image"]
+            present(picker, animated: true, completion: nil)
+        } else {
+            return
+        }
+    }
+
+    func openGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let picker = UIImagePickerController()
+            picker.sourceType = .photoLibrary
+            picker.mediaTypes = ["public.image"]
+            picker.delegate = self
+            present(picker, animated: true, completion: nil)
+        } else {
+            return
+        }
     }
 }
 
@@ -109,9 +176,30 @@ extension CreatePostViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if let currentText = textView.text as NSString? {
             let newText = currentText.replacingCharacters(in: range, with: text)
-            viewModel.updateMessage(newText)
+            viewModel.updateContentText(newText)
         }
         return true
+    }
+}
+
+//MARK: - ImagePicker Delegate
+extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let originalImage = info[.originalImage] as? UIImage {
+            let cropper = PhotoCropperViewController(image: originalImage)
+            cropper.canceled = { [unowned picker] vc in
+                picker.dismiss(animated: true, completion: nil)
+            }
+            cropper.finished = { [unowned self] vc, croppedImage in
+                vc.dismiss(animated: true, completion: nil)
+                self.updateImage(image: originalImage)
+            }
+            picker.pushViewController(cropper, animated: true)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 

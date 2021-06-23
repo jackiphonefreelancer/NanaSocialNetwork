@@ -19,24 +19,28 @@ class CreatePostViewModel: NSObject {
     
     // Variables
     let state = BehaviorSubject(value: State.none) // Default - none
-    let buttonState = BehaviorSubject(value: false) // Default - false
+    let postButtonState = BehaviorSubject(value: false) // Default - false
+    let deleteButtonState = BehaviorSubject(value: false) // Default - false
     
-    private var message: String?
+    private var content: String?
+    private var image: UIImage?
 }
 
 //MARK: - Business Logic
 extension CreatePostViewModel {
-    func updateMessage(_ message: String?) {
-        self.message = message
-        validateInput()
-    }
-    
-    func validateInput() {
-        guard let message = message, !message.isEmpty else {
-            buttonState.onNext(false)
+    func updateContentText(_ text: String?) {
+        self.content = text
+        // Text is required, cannot be empty
+        guard let content = content, !content.isEmpty else {
+            postButtonState.onNext(false)
             return
         }
-        buttonState.onNext(true)
+        postButtonState.onNext(true)
+    }
+    
+    func updateContentImage(_ image: UIImage?) {
+        self.image = image
+        deleteButtonState.onNext(image != nil)
     }
 }
 
@@ -44,7 +48,7 @@ extension CreatePostViewModel {
 extension CreatePostViewModel {
     func createPost() {
         state.onNext(.loading)
-        APIManager.shared.createPost(message: message!, completion: { [weak self] error in
+        APIManager.shared.createPost(content: content!, image: nil, completion: { [weak self] error in
             if let _ = error {
                 self?.state.onNext(.error)
             } else {

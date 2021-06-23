@@ -10,7 +10,7 @@ import RxSwift
 
 class ProfileViewModel: NSObject {
     
-    let logoutState = PublishSubject<Bool>() // Success or fail
+    let logoutState = PublishSubject<Bool>() // Success or not
 }
 
 //MARK: - View Logic

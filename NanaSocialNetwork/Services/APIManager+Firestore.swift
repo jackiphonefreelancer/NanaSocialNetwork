@@ -84,13 +84,13 @@ extension APIManager {
      `completion block`: return 1 parameter
      `param 1`: If success return no error, else return error
      **/
-    func createPost(message: String, completion: @escaping (Error?) -> Void) {
+    func createPost(content: String, image: UIImage?, completion: @escaping (Error?) -> Void) {
         guard let user = AppSession.shared.appUser else {
             completion(NSError.unknown)
             return
         }
         db.collection("Posts").addDocument(data: [
-            "content": message,
+            "content": content,
             "createdAt": Date(),
             "ownerId": user.uid,
             "ownerName": user.displayName
