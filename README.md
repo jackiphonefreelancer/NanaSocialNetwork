@@ -26,8 +26,8 @@ NanaSocialNetwork is iOS application for a micro social media service
 ### Project Overview
 - Features
   - Supported Dark/Light mode
-  - Sign in/ Sign up/ Sign out
-  - Create new post (text and image and delete your post
+  - Sign in/ Sign up/ Sign out (with email/password medthod)
+  - Create new post (text and image) and delete your post
   - Realtime feeds
   - Screens: There are 5 main screens in this version
     - Login: User can login using email/password
