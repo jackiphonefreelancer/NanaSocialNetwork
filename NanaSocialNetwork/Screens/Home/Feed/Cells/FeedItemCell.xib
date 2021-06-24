@@ -29,16 +29,16 @@
                                 <rect key="frame" x="16" y="16" width="351" height="456"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-S5-Fdf">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="1fP-32-0os"/>
+                                            <constraint firstAttribute="height" constant="25" id="1fP-32-0os"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" name="appHeaderTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfB-DT-T6J">
-                                        <rect key="frame" x="0.0" y="24" width="351" height="15"/>
+                                        <rect key="frame" x="0.0" y="30" width="351" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="ysJ-56-Mm0"/>
                                         </constraints>
@@ -47,13 +47,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8KE-QX-v5R">
-                                        <rect key="frame" x="0.0" y="44" width="351" height="263.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="351" height="263.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8KE-QX-v5R" secondAttribute="height" multiplier="100:75" id="cv3-9C-3Aa"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm8-dq-eEW">
-                                        <rect key="frame" x="0.0" y="312.5" width="351" height="143.5"/>
+                                        <rect key="frame" x="0.0" y="318.5" width="351" height="137.5"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                         <color key="textColor" name="appNormalTextColor"/>
