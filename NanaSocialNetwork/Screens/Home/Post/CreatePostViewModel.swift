@@ -9,7 +9,6 @@ import Foundation
 import RxSwift
 
 class CreatePostViewModel: NSObject {
-    
     enum State {
         case none
         case loading
