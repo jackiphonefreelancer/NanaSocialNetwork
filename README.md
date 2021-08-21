@@ -1,6 +1,6 @@
 # NanaSocialNetwork
 
-NanaSocialNetwork is iOS application for a micro social media service
+NanaSocialNetwork is sample iOS application for a micro social media service
 
 ### Prerequisites
 - Xcode version 12.5
