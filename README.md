@@ -23,7 +23,7 @@ NanaSocialNetwork is iOS application for a micro social media service
   - RxSwift: Swift-specific implementation of the Reactive Extensions standard
   - KingFisher: Library for downloading and caching images
 
-### Project Overview
+### Project Overviews
 - Features
   - Supported Dark/Light mode
   - Sign in/ Sign up/ Sign out (with email/password medthod)
