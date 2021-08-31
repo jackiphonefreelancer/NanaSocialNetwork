@@ -66,7 +66,7 @@ extension LoginTests {
             .disposed(by: disposeBag)
         viewModel.login()
         
-        waitForExpectations(timeout: 10) // Timeout for 10 sec.
+        waitForExpectations(timeout: 15) // Timeout for 15 sec.
         XCTAssertTrue(result)
     }
     
