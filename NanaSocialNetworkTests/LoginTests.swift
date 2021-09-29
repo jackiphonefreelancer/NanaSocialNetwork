@@ -29,7 +29,7 @@ class LoginTests: XCTestCase {
 //MARK: - Test: Email validation
 extension LoginTests {
     func testEmailIsValid() throws {
-        let viewModel = LoginViewModel(email: "test123@gmail.com", password: "")
+        let viewModel = LoginViewModel(email: "test11234@gmail.com", password: "")
         XCTAssertTrue(viewModel.isValidEmail())
     }
     
